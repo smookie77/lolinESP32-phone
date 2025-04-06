@@ -25,10 +25,16 @@ def timest(x):
 
 
 def channelHist(messages):
-    if messages is not None:
-        f = open("hist.txt", "w")
+    if messages is not None and len(messages) > 0:
+        guildname = str(messages[0].guild.name).replace(" ", "_")
+        channelname = str(messages[0].channel.name).replace(" ", "_")
+        filename = str(guildname + "_-_" + channelname + ".txt")
+        messages.reverse()
+        f = open(filename, "w")
+        f.write("#Messages in " + guildname + " at " + channelname + "\n\n")
         for i in messages:
-            f.write(i.author.name + " in " + i.guild.name + " at " + i.channel.name + " at " + timest(i))
+            #f.write(i.author.name + " in " + i.guild.name + " at " + i.channel.name + " at " + timest(i))
+            f.write(i.author.name + " at " + timest(i))
             f.write("\n")
             f.write(i.content)
             f.write("\n")
@@ -37,3 +43,11 @@ def channelHist(messages):
 
     else: print("< Something went wrong :( >")
 
+def appendHist(message):
+    if message is not None:
+        f = open("hist.txt", "a")
+        f.write(message.author.name + " in " + message.guild.name + " at " + message.channel.name + " at " + timest(message))
+        f.write("\n")
+        f.write(message.content)
+        f.write("\n")
+        f.close()

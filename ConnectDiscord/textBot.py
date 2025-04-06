@@ -5,7 +5,7 @@ import discord
 import hist
 import on_screen
 
-import login_info
+from login_info import *
 
 def recipientFunc():
     intents = discord.Intents.default()
@@ -16,15 +16,23 @@ def recipientFunc():
     @client.event
     async def on_ready():
         print(f'We have logged in as {client.user}')
-        channel = client.get_channel(login_info.channel_id) #replace with your channel id
-        messages = [message async for message in channel.history(limit=100)]
-        hist.channelHist(messages)
+
+        guild = client.get_guild(server_id) # replace with your server id
+        channels = client.get_all_channels()
+        channelsToBackup = "general, off-topic, spam" # replace with the names of channels in your server you want to see
+        for channel in channels:
+            if channel.name in channelsToBackup and isinstance(channel, discord.TextChannel) and channel.permissions_for(guild.me).view_channel:
+                messages = [message async for message in channel.history(limit=100)]
+                hist.channelHist(messages)
+        
+        
         
 
     @client.event
     async def on_message(message):
         on_screen.print_msgCurrent(message)
+        hist.appendHist(message)
 
 
 
-    client.run(login_info.token) #replace with your token
+    client.run(token) # replace with your token
