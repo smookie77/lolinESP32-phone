@@ -11,6 +11,6 @@ void display_handleMode_boot(){
         display_print(format_string("BAT V: %.2f", readBattery_volts()), 1, 2);
 
         display_print("KeyboardTask: ", 1,3);
-        while(eTaskGetState(keyboard_Task) != eRunning) {vPortYield();} // Wait for the keyboard task to start
-        display_print("ok", 1,3);
+        while(eTaskGetState(keyboard_Task) == eInvalid) {vTaskDelay(1/portTICK_PERIOD_MS);} // Wait for the keyboard task to start
+        display_print("*", 1, 84-6, 24);
 }

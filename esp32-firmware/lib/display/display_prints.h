@@ -1,11 +1,7 @@
 #ifndef DISPLAY_PRINTS_H_
 #define DISPLAY_PRINTS_H_
 
-#include <Arduino.h>
-
-#include <SPI.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_PCD8544.h>
+#include <display.h>
 
 #define LCD_DEFAULT_FONTSIZE 1
 

@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <display_prints.h>
 #include <display_handlers.h>
-#include <string_utils.h>
 
+#include <../utils/string_utils.h>
 #include <phone_defines.h>
 
 #include <SPI.h>
@@ -20,7 +20,7 @@ extern TaskHandle_t displayTask;
 #define LCD_CS_PIN 15
 #define LCD_RST_PIN 13
 
-#define LCD_CONTRAST 50
+#define LCD_CONTRAST 53
 
 // Primary functions
 
