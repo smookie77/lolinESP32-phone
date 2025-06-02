@@ -7,6 +7,7 @@
 
 // Function prototypes
 
+void display_print_ScrollingMenu(uint8_t size, uint8_t rows, char* text);
 void display_print(char * str);
 void display_print(char * str, uint8_t size);
 void display_print(char * str, uint8_t size,  uint8_t row);
