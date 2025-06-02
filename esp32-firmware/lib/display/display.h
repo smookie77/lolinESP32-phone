@@ -1,3 +1,10 @@
+/**
+ * @file display.h
+ * @brief Display driver interface for the lolinESP32 phone project.
+ *
+ * Contains function declarations and macros for initializing and controlling the Nokia 5110 LCD display.
+ */
+
 #ifndef DISPLAY_H_
 #define DISPLAY_H_
 

@@ -1,3 +1,10 @@
+/**
+ * @file display_prints.h
+ * @brief Print utilities for the Nokia 5110 LCD display.
+ *
+ * Provides functions for printing text and menus to the display.
+ */
+
 #ifndef DISPLAY_PRINTS_H_
 #define DISPLAY_PRINTS_H_
 

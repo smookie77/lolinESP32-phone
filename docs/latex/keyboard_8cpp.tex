@@ -1,0 +1,82 @@
+\doxysection{lib/keyboard/keyboard.cpp File Reference}
+\hypertarget{keyboard_8cpp}{}\label{keyboard_8cpp}\index{lib/keyboard/keyboard.cpp@{lib/keyboard/keyboard.cpp}}
+
+
+Keyboard driver implementation for the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$keyboard.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781}\label{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781} 
+void {\bfseries keyboard\+\_\+init} ()
+\item 
+\Hypertarget{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319}\label{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319} 
+char {\bfseries keyboard\+\_\+get\+Key} ()
+\item 
+\Hypertarget{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692}\label{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692} 
+void {\bfseries keyboard\+\_\+\+Task\+Code} (void \texorpdfstring{$\ast$}{*}params)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8cpp_ac0b07d9ea8814ed34ebaf77df61d1309}\label{keyboard_8cpp_ac0b07d9ea8814ed34ebaf77df61d1309} 
+volatile char {\bfseries keyboard\+\_\+pressed\+Key} = \textquotesingle{}\textbackslash{}0\textquotesingle{}
+\item 
+\Hypertarget{keyboard_8cpp_a79a0f3e539339f65035d34b48ff48cee}\label{keyboard_8cpp_a79a0f3e539339f65035d34b48ff48cee} 
+Task\+Handle\+\_\+t {\bfseries keyboard\+\_\+\+Task}
+\item 
+\Hypertarget{keyboard_8cpp_a829655a147df70dd4cc94eae40a2204e}\label{keyboard_8cpp_a829655a147df70dd4cc94eae40a2204e} 
+const byte {\bfseries ROWS} = 5
+\item 
+\Hypertarget{keyboard_8cpp_aefd90f1160eaa105bc910d4d7c46b815}\label{keyboard_8cpp_aefd90f1160eaa105bc910d4d7c46b815} 
+const byte {\bfseries COLS} = 4
+\item 
+char \mbox{\hyperlink{keyboard_8cpp_ada2ba6403f68f07992cb2b1b6b6ad35f}{hexa\+Keys}} \mbox{[}ROWS\mbox{]}\mbox{[}COLS\mbox{]}
+\item 
+\Hypertarget{keyboard_8cpp_a6d6753e0ae098b31e2f84d4024e361cf}\label{keyboard_8cpp_a6d6753e0ae098b31e2f84d4024e361cf} 
+byte {\bfseries row\+Pins} \mbox{[}ROWS\mbox{]} = \{25, 33, 32, 5, 19\}
+\item 
+\Hypertarget{keyboard_8cpp_aa9fece7b062124080e4b2976f9a8b675}\label{keyboard_8cpp_aa9fece7b062124080e4b2976f9a8b675} 
+byte {\bfseries col\+Pins} \mbox{[}COLS\mbox{]} = \{12, 14, 27, 26\}
+\item 
+\Hypertarget{keyboard_8cpp_a1d289fcc804ecdd92dfd8fef8f740bf0}\label{keyboard_8cpp_a1d289fcc804ecdd92dfd8fef8f740bf0} 
+Keypad {\bfseries custom\+Keypad} = Keypad( make\+Keymap(hexa\+Keys), row\+Pins, col\+Pins, ROWS, COLS)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keyboard driver implementation for the lolin\+ESP32 phone project. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/02 
+\end{DoxyDate}
+
+
+\label{doc-var-members}
+\Hypertarget{keyboard_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{keyboard_8cpp_ada2ba6403f68f07992cb2b1b6b6ad35f}\index{keyboard.cpp@{keyboard.cpp}!hexaKeys@{hexaKeys}}
+\index{hexaKeys@{hexaKeys}!keyboard.cpp@{keyboard.cpp}}
+\doxysubsubsection{\texorpdfstring{hexaKeys}{hexaKeys}}
+{\footnotesize\ttfamily \label{keyboard_8cpp_ada2ba6403f68f07992cb2b1b6b6ad35f} 
+char hexa\+Keys\mbox{[}ROWS\mbox{]}\mbox{[}COLS\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'\string^'},\textcolor{charliteral}{'<'},\textcolor{charliteral}{'X'},\textcolor{charliteral}{'v'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'3'},\textcolor{charliteral}{'6'},\textcolor{charliteral}{'9'},\textcolor{charliteral}{'\#'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'2'},\textcolor{charliteral}{'5'},\textcolor{charliteral}{'8'},\textcolor{charliteral}{'0'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'1'},\textcolor{charliteral}{'4'},\textcolor{charliteral}{'7'},\textcolor{charliteral}{'*'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'a'},\textcolor{charliteral}{'b'},\textcolor{charliteral}{'>'},\textcolor{charliteral}{'c'}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

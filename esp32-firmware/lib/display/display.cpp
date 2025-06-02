@@ -1,3 +1,12 @@
+/**
+ * @file display.cpp
+ * @author smookie77 
+ * @brief Display driver implementation for the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * 
+ */
 #include <display.h>
 
 Adafruit_PCD8544 display = Adafruit_PCD8544(LCD_DC_PIN, LCD_CS_PIN, LCD_RST_PIN);

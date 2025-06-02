@@ -1,0 +1,54 @@
+\doxysection{lib/display/display.h File Reference}
+\hypertarget{display_8h}{}\label{display_8h}\index{lib/display/display.h@{lib/display/display.h}}
+
+
+Display driver interface for the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$display\+\_\+prints.\+h$>$}\newline
+{\ttfamily \#include $<$display\+\_\+handlers.\+h$>$}\newline
+{\ttfamily \#include $<$../utils/string\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$phone\+\_\+defines.\+h$>$}\newline
+{\ttfamily \#include $<$SPI.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+GFX.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+PCD8544.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8h_a402d8ccd0bb0a6cc377222e75b8e050e}\label{display_8h_a402d8ccd0bb0a6cc377222e75b8e050e} 
+\#define {\bfseries LCD\+\_\+\+DC\+\_\+\+PIN}~2
+\item 
+\Hypertarget{display_8h_a50d72083b1ed4dd0bc2eaabb4a0332c8}\label{display_8h_a50d72083b1ed4dd0bc2eaabb4a0332c8} 
+\#define {\bfseries LCD\+\_\+\+CS\+\_\+\+PIN}~15
+\item 
+\Hypertarget{display_8h_a9d11073f149e02e0a07937196d1e5a8e}\label{display_8h_a9d11073f149e02e0a07937196d1e5a8e} 
+\#define {\bfseries LCD\+\_\+\+RST\+\_\+\+PIN}~13
+\item 
+\Hypertarget{display_8h_a2fccda530baf3b213f677249fd7ce6e7}\label{display_8h_a2fccda530baf3b213f677249fd7ce6e7} 
+\#define {\bfseries LCD\+\_\+\+CONTRAST}~53
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8h_a8d41c12af4f6e6faad84e1f21f99b3e1}\label{display_8h_a8d41c12af4f6e6faad84e1f21f99b3e1} 
+void {\bfseries display\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize the LCD dislpay. \end{DoxyCompactList}\item 
+\Hypertarget{display_8h_a9014901d3fcecb4c933165e97d3bb75d}\label{display_8h_a9014901d3fcecb4c933165e97d3bb75d} 
+void {\bfseries display\+Task\+\_\+code} (void \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Infinetely running code for the display functionality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8h_a560fad537460ccbe67d34fe45553af8f}\label{display_8h_a560fad537460ccbe67d34fe45553af8f} 
+Adafruit\+\_\+\+PCD8544 {\bfseries display}
+\item 
+\Hypertarget{display_8h_a92c6e37eb22a3715d8deee4f1bde57ac}\label{display_8h_a92c6e37eb22a3715d8deee4f1bde57ac} 
+Task\+Handle\+\_\+t {\bfseries display\+Task}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Display driver interface for the lolin\+ESP32 phone project. 
+
+Contains function declarations and macros for initializing and controlling the Nokia 5110 LCD display. 

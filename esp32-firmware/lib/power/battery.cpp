@@ -1,3 +1,12 @@
+/**
+ * @file battery.cpp
+ * @author smookie77 
+ * @brief Battery management implementation for the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * 
+ */
 #include <battery.h>
 
 uint16_t readBattery_raw(){

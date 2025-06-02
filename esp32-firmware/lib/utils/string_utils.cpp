@@ -1,3 +1,12 @@
+/**
+ * @file string_utils.cpp
+ * @author smookie77 
+ * @brief String utility functions for the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * 
+ */
 #include "string_utils.h"
 
 #define FORMAT_BUFFER_SIZE 128

@@ -1,3 +1,13 @@
+/**
+ * @file keyboard.h
+ * @author smookie77 
+ * @brief Keyboard driver interface for the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * 
+ */
+
 #ifndef KEYBOARD_H_
 #define KEYBOARD_H_
 

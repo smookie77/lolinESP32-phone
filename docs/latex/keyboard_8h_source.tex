@@ -1,0 +1,22 @@
+\doxysection{keyboard.\+h}
+\hypertarget{keyboard_8h_source}{}\label{keyboard_8h_source}\index{lib/keyboard/keyboard.h@{lib/keyboard/keyboard.h}}
+\mbox{\hyperlink{keyboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ KEYBOARD\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ KEYBOARD\_H\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Keypad.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{char}\ keyboard\_pressedKey;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ TaskHandle\_t\ keyboard\_Task;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ keyboard\_init();}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ keyboard\_TaskCode(\textcolor{keywordtype}{void}\ *\ params);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{char}\ keyboard\_getKey();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//KEYBOARD\_H\_}}
+
+\end{DoxyCode}

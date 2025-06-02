@@ -1,0 +1,51 @@
+\doxysection{lib/display/display.cpp File Reference}
+\hypertarget{display_8cpp}{}\label{display_8cpp}\index{lib/display/display.cpp@{lib/display/display.cpp}}
+
+
+Display driver implementation for the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$display.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8cpp_ab33d76ecef856da078b0fd5a61e6d76a}\label{display_8cpp_ab33d76ecef856da078b0fd5a61e6d76a} 
+enum {\bfseries display\+Mode\+\_\+e} \{ {\bfseries display\+Mode\+\_\+boot}
+, {\bfseries display\+Mode\+\_\+main}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1}\label{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1} 
+void {\bfseries display\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialize the LCD dislpay. \end{DoxyCompactList}\item 
+\Hypertarget{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d}\label{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d} 
+void {\bfseries display\+Task\+\_\+code} (void \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Infinetely running code for the display functionality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{display_8cpp_a560fad537460ccbe67d34fe45553af8f}\label{display_8cpp_a560fad537460ccbe67d34fe45553af8f} 
+Adafruit\+\_\+\+PCD8544 {\bfseries display} = Adafruit\+\_\+\+PCD8544(LCD\+\_\+\+DC\+\_\+\+PIN, LCD\+\_\+\+CS\+\_\+\+PIN, LCD\+\_\+\+RST\+\_\+\+PIN)
+\item 
+\Hypertarget{display_8cpp_a92c6e37eb22a3715d8deee4f1bde57ac}\label{display_8cpp_a92c6e37eb22a3715d8deee4f1bde57ac} 
+Task\+Handle\+\_\+t {\bfseries display\+Task}
+\item 
+\Hypertarget{display_8cpp_a8098a149864b1ea4e2b1e10854cdd023}\label{display_8cpp_a8098a149864b1ea4e2b1e10854cdd023} 
+display\+Mode\+\_\+e {\bfseries current\+\_\+display\+Mode} = display\+Mode\+\_\+boot
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Display driver implementation for the lolin\+ESP32 phone project. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/02 
+\end{DoxyDate}

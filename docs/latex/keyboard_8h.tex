@@ -1,0 +1,44 @@
+\doxysection{lib/keyboard/keyboard.h File Reference}
+\hypertarget{keyboard_8h}{}\label{keyboard_8h}\index{lib/keyboard/keyboard.h@{lib/keyboard/keyboard.h}}
+
+
+Keyboard driver interface for the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Keypad.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8h_aaeb4e4a3c4813ee1efc6b98bba9ec781}\label{keyboard_8h_aaeb4e4a3c4813ee1efc6b98bba9ec781} 
+void {\bfseries keyboard\+\_\+init} ()
+\item 
+\Hypertarget{keyboard_8h_ab20c58f7874c7cc085ace4423dfa9692}\label{keyboard_8h_ab20c58f7874c7cc085ace4423dfa9692} 
+void {\bfseries keyboard\+\_\+\+Task\+Code} (void \texorpdfstring{$\ast$}{*}params)
+\item 
+\Hypertarget{keyboard_8h_a4d7f0c28b64442ea519eb5aa6cd72319}\label{keyboard_8h_a4d7f0c28b64442ea519eb5aa6cd72319} 
+char {\bfseries keyboard\+\_\+get\+Key} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8h_ac0b07d9ea8814ed34ebaf77df61d1309}\label{keyboard_8h_ac0b07d9ea8814ed34ebaf77df61d1309} 
+volatile char {\bfseries keyboard\+\_\+pressed\+Key}
+\item 
+\Hypertarget{keyboard_8h_a79a0f3e539339f65035d34b48ff48cee}\label{keyboard_8h_a79a0f3e539339f65035d34b48ff48cee} 
+Task\+Handle\+\_\+t {\bfseries keyboard\+\_\+\+Task}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keyboard driver interface for the lolin\+ESP32 phone project. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/02 
+\end{DoxyDate}

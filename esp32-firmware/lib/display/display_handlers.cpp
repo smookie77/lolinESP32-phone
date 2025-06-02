@@ -1,3 +1,13 @@
+/**
+ * @file display_handlers.cpp
+ * @author smookie77
+ * @brief Handlers for display modes in the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 #include <display_handlers.h>
 #include <display_prints.h>
 #include <string_utils.h>

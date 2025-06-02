@@ -1,0 +1,43 @@
+\doxysection{lib/power/battery.h File Reference}
+\hypertarget{battery_8h}{}\label{battery_8h}\index{lib/power/battery.h@{lib/power/battery.h}}
+
+
+Battery management interface for the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{battery_8h_a42e8ab42859d55372391d2ec2096ea26}\label{battery_8h_a42e8ab42859d55372391d2ec2096ea26} 
+\#define {\bfseries BATTERY\+\_\+\+ADC\+\_\+\+PIN}~35
+\item 
+\Hypertarget{battery_8h_a8959e4f9ebdf476605dda7e582b950e4}\label{battery_8h_a8959e4f9ebdf476605dda7e582b950e4} 
+\#define {\bfseries BATTERY\+\_\+\+VOLDIV\+\_\+\+RATIO}~1
+\item 
+\Hypertarget{battery_8h_ae4c2311ba39e3f99879ed7c46561293f}\label{battery_8h_ae4c2311ba39e3f99879ed7c46561293f} 
+\#define {\bfseries BATTERY\+\_\+\+ADC\+\_\+\+SHIFT}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{battery_8h_a6e3478b600a20449c8636337d2a5a85d}\label{battery_8h_a6e3478b600a20449c8636337d2a5a85d} 
+uint16\+\_\+t {\bfseries read\+Battery\+\_\+raw} ()
+\item 
+\Hypertarget{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99}\label{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99} 
+float {\bfseries read\+Battery\+\_\+volts} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Battery management interface for the lolin\+ESP32 phone project. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/02 
+\end{DoxyDate}

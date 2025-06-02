@@ -1,3 +1,12 @@
+/**
+ * @file keyboard.cpp
+ * @author smookie77 
+ * @brief Keyboard driver implementation for the lolinESP32 phone project.
+ * @version 0.1
+ * @date 2025-06-02
+ * 
+ * 
+ */
 #include <keyboard.h>
 
 volatile char keyboard_pressedKey = '\0';
