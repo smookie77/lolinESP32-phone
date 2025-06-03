@@ -3,8 +3,6 @@
 import discord
 
 import hist
-import on_screen
-
 from login_info import *
 
 def recipientFunc():
@@ -30,7 +28,6 @@ def recipientFunc():
 
     @client.event
     async def on_message(message):
-        on_screen.print_msgCurrent(message)
         hist.appendHist(message)
 
 

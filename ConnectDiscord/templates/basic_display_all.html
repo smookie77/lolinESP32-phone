@@ -1,0 +1,11 @@
+<html>
+<body>
+    <ul>
+        {% for i in range(0, l, 2) %}
+        <li>{{ a[i] }}: </li>
+        <li style="list-style-type:none;">{{ a[i+1] }}</li>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
