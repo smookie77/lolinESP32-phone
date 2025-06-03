@@ -1,1 +1,5 @@
 passwords.py
+login_info.py
+__pycache__
+*.pyc
+A*.txt

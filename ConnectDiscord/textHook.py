@@ -1,7 +1,17 @@
-#use hook to send messages
+#Send messages via discord webhooks
+from login_info import webhook1, webhook2
 
 from discord_webhook import DiscordWebhook
 
-def sendMessage(message):
-    webhook = DiscordWebhook(url='url to hook', content=message)
+def sendMessageGeneral(message):
+    webhook = DiscordWebhook(url=webhook1, content=message)
     response = webhook.execute()
+
+def sendMessageSpam(message):
+    webhook = DiscordWebhook(url=webhook2, content=message)
+    response = webhook.execute()
+
+def sendMessage(message, server, channel):
+    if server == "Average_elimex_customers":
+        if channel == "general": sendMessageGeneral(message)
+        elif channel == "spam": sendMessageSpam(message)
