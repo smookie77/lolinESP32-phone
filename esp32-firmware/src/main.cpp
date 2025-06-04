@@ -4,8 +4,6 @@
  * @brief Main application entry point for the lolinESP32 phone project.
  * @version 0.1
  * @date 2025-06-02
- * 
- * 
  */
 
 #include <Arduino.h>
