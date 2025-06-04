@@ -9,6 +9,7 @@
 #define DISPLAY_PRINTS_H_
 
 #include <display.h>
+#include <serialH.h>
 
 #define LCD_DEFAULT_FONTSIZE 1
 

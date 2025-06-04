@@ -30,6 +30,7 @@ byte colPins[COLS] = {12, 14, 27, 26}; //connect to the column pinouts of the ke
 Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
 
 void keyboard_init() {
+    serial_buffer_write(SERIAL_TASK_OTHER1, "Keyboard: init\n", 15);
     xTaskCreate(keyboard_TaskCode, "KeyboardTask", 2048, NULL, 1, &keyboard_Task);
 }
 
@@ -40,10 +41,14 @@ char keyboard_getKey() {
 }
 
 void keyboard_TaskCode(void * params) {
+    serial_buffer_write(SERIAL_TASK_OTHER1, "Keyboard: task started\n", 23);
     for(;;) {
         char key = customKeypad.getKey();
         if(key != NO_KEY) {
             keyboard_pressedKey = key;
+            char msg[32];
+            snprintf(msg, sizeof(msg), "Keyboard: key=%c\n", key);
+            serial_buffer_write(SERIAL_TASK_OTHER1, msg, strlen(msg));
         }
         vTaskDelay(pdMS_TO_TICKS(5));
     }

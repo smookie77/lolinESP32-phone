@@ -11,6 +11,7 @@
 #define BATERY_H_
 
 #include <Arduino.h>
+#include <serialH.h>
 
 #define BATTERY_ADC_PIN 35
 #define BATTERY_VOLDIV_RATIO 1

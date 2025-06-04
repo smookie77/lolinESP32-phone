@@ -11,6 +11,7 @@
 #include <Arduino.h>
 #include <display_prints.h>
 #include <display_handlers.h>
+#include <serialH.h>
 
 #include <../utils/string_utils.h>
 #include <phone_defines.h>

@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <serialH.h>
 
 // Format string with variable arguments, returns pointer to static buffer
 char* format_string(const char* restrict, ...);

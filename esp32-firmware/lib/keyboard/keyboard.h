@@ -13,6 +13,7 @@
 
 #include <Arduino.h>
 #include <Keypad.h>
+#include <serialH.h>
 
 extern volatile char keyboard_pressedKey;
 extern TaskHandle_t keyboard_Task;

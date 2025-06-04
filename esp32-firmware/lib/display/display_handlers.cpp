@@ -10,6 +10,7 @@
  */
 #include <display_handlers.h>
 #include <display_prints.h>
+#include <serialH.h>
 #include <string_utils.h>
 #include <battery.h>
 
@@ -28,7 +29,8 @@ void display_handleMode_boot(){
         readBattery_raw(),
         readBattery_volts()
     );
-    
+    serial_buffer_write(SERIAL_TASK_DISPLAY, "Display: boot mode\n", 20);
+    serial_buffer_write(SERIAL_TASK_DISPLAY, bootText, strlen(bootText));
     display_print_ScrollingMenu(1, 6, bootText);
     
     while(eTaskGetState(keyboard_Task) == eInvalid) {

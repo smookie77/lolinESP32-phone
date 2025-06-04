@@ -6,6 +6,8 @@
  */
 
 #include <display_prints.h>
+#include <serialH.h>
+#include <string_utils.h>
 
 extern Adafruit_PCD8544 display;
 
@@ -53,6 +55,7 @@ void display_print_ScrollingMenu(uint8_t size, uint8_t rows, char* text) {
 void display_print(char * str){
 	display.setTextSize(LCD_DEFAULT_FONTSIZE);
 	display.print(str);
+	serial_buffer_write(SERIAL_TASK_DISPLAY, str, strlen(str));
 }
 
 
@@ -64,6 +67,7 @@ void display_print(char * str){
 void display_print(char * str, uint8_t size){
 	display.setTextSize(size);
 	display.print(str);
+	serial_buffer_write(SERIAL_TASK_DISPLAY, str, strlen(str));
 }
 
 
@@ -78,6 +82,7 @@ void display_print(char * str, uint8_t size,  uint8_t row){
 	display.setCursor(0,row*size*8);
 	display.printf(str);
 }
+
 
 /*!
     @brief   Print a given string to the LCD, with an option to change the font size, and text's position

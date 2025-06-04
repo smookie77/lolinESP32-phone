@@ -17,5 +17,6 @@ char* format_string(const char* restrict, ...) {
     va_start(args, restrict);
     vsnprintf(buffer, FORMAT_BUFFER_SIZE, restrict, args);
     va_end(args);
+    serial_buffer_write(SERIAL_TASK_OTHER1, buffer, strlen(buffer));
     return buffer;
 }

@@ -16,6 +16,7 @@
 
 #include <keyboard.h>
 #include <battery.h>
+#include <serialH.h>
 
 
 void display_handleMode_boot();

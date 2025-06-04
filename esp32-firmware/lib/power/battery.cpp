@@ -11,11 +11,18 @@
 
 uint16_t readBattery_raw(){
         uint16_t val = analogRead(BATTERY_ADC_PIN);
+        char msg[32];
+        snprintf(msg, sizeof(msg), "Battery raw: %u\n", val);
+        serial_buffer_write(SERIAL_TASK_OTHER2, msg, strlen(msg));
         return val;
 }
 
 float readBattery_volts(){
         float val = analogReadMilliVolts(BATTERY_ADC_PIN);
         const float calibration_factor = 0.972f;  // Calibration factor (4.13V/4.25V)
-        return ((val) * 2.0f * calibration_factor) / 1000.0f;
+        float volts = ((val) * 2.0f * calibration_factor) / 1000.0f;
+        char msg[48];
+        snprintf(msg, sizeof(msg), "Battery volts: %.2f\n", volts);
+        serial_buffer_write(SERIAL_TASK_OTHER2, msg, strlen(msg));
+        return volts;
 }

@@ -18,6 +18,7 @@ var NAVTREEINDEX0 =
 "display_8h.html#a9014901d3fcecb4c933165e97d3bb75d":[0,0,1,0,1,1],
 "display_8h_source.html":[0,0,1,0,1],
 "display__handlers_8cpp.html":[0,0,1,0,2],
+"display__handlers_8h.html":[0,0,1,0,3],
 "display__handlers_8h_source.html":[0,0,1,0,3],
 "display__prints_8cpp.html":[0,0,1,0,4],
 "display__prints_8cpp.html#a07498ecff9923eb17ed256ff8ce6cf04":[0,0,1,0,4,0],
