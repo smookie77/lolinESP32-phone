@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['on_5fweb_0',['on_web',['../namespaceon__web.html',1,'']]],
-  ['on_5fweb_2epy_1',['on_web.py',['../on__web_8py.html',1,'']]]
+  ['send_5fmsg_0',['send_msg',['../on__web_8py.html#a40ca5ddcdb99b90195e3546ea75b0700',1,'on_web']]]
 ];

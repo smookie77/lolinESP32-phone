@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['phone_5fdefines_2eh_0',['phone_defines.h',['../phone__defines_8h.html',1,'']]],
-  ['phone_5fver_1',['PHONE_VER',['../phone__defines_8h.html#a775863b2d6bac59031273b34c7972cca',1,'phone_defines.h']]]
+  ['string_5futils_2ecpp_0',['string_utils.cpp',['../string__utils_8cpp.html',1,'']]],
+  ['string_5futils_2eh_1',['string_utils.h',['../string__utils_8h.html',1,'']]]
 ];
