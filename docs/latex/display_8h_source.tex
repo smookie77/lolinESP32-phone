@@ -3,36 +3,32 @@
 \mbox{\hyperlink{display_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DISPLAY\_H\_}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DISPLAY\_H\_}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{display__prints_8h}{display\_prints.h}}>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{display__handlers_8h}{display\_handlers.h}}>}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{string__utils_8h}{../utils/string\_utils.h}}>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{phone__defines_8h}{phone\_defines.h}}>}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <SPI.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <Adafruit\_GFX.h>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <Adafruit\_PCD8544.h>}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ Adafruit\_PCD8544\ display;}
-\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ TaskHandle\_t\ displayTask;}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ DISPLAY\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ DISPLAY\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{display__prints_8h}{display\_prints.h}}>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{display__handlers_8h}{display\_handlers.h}}>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{serialH_8h}{serialH.h}}>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{string__utils_8h}{../utils/string\_utils.h}}>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{phone__defines_8h}{phone\_defines.h}}>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <SPI.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <Adafruit\_GFX.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <Adafruit\_PCD8544.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ Adafruit\_PCD8544\ \mbox{\hyperlink{display_8cpp_a560fad537460ccbe67d34fe45553af8f}{display}};}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ LCD\_DC\_PIN\ 2}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ LCD\_CS\_PIN\ 15}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ LCD\_RST\_PIN\ 13}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ TaskHandle\_t\ \mbox{\hyperlink{display_8cpp_a92c6e37eb22a3715d8deee4f1bde57ac}{displayTask}};}
 \DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LCD\_CONTRAST\ 53}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{comment}{//\ Primary\ functions}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a8d41c12af4f6e6faad84e1f21f99b3e1}{display\_init}}();}
-\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a9014901d3fcecb4c933165e97d3bb75d}{displayTask\_code}}(\textcolor{keywordtype}{void}\ *\ params);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DISPLAY\_H\_}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LCD\_DC\_PIN\ 2\ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ LCD\_CS\_PIN\ 15\ }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ LCD\_RST\_PIN\ 13\ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ LCD\_CONTRAST\ 53\ }}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a8d41c12af4f6e6faad84e1f21f99b3e1}{display\_init}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a9014901d3fcecb4c933165e97d3bb75d}{displayTask\_code}}(\textcolor{keywordtype}{void}\ *\ params);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DISPLAY\_H\_}}
 
 \end{DoxyCode}

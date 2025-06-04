@@ -9,15 +9,16 @@ Main application entry point for the lolin\+ESP32 phone project.
 {\ttfamily \#include $<$keyboard.\+h$>$}\newline
 {\ttfamily \#include $<$display.\+h$>$}\newline
 {\ttfamily \#include $<$battery.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
 void {\bfseries setup} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Arduino setup function. Initializes display and keyboard. \end{DoxyCompactList}\item 
 \Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
 void {\bfseries loop} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Arduino main loop. (Currently empty, all logic in tasks.) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -30,5 +31,6 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Initializes system peripherals and starts the main application loop. 

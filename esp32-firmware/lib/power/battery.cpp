@@ -5,10 +5,14 @@
  * @version 0.1
  * @date 2025-06-02
  * 
- * 
+ * Implements functions for reading battery voltage and raw ADC values.
  */
 #include <battery.h>
 
+/**
+ * @brief Read raw ADC value from battery pin.
+ * @return Raw ADC value.
+ */
 uint16_t readBattery_raw(){
         uint16_t val = analogRead(BATTERY_ADC_PIN);
         char msg[32];
@@ -17,6 +21,10 @@ uint16_t readBattery_raw(){
         return val;
 }
 
+/**
+ * @brief Read battery voltage in volts.
+ * @return Battery voltage as float.
+ */
 float readBattery_volts(){
         float val = analogReadMilliVolts(BATTERY_ADC_PIN);
         const float calibration_factor = 0.972f;  // Calibration factor (4.13V/4.25V)

@@ -99,17 +99,59 @@ $(function(){initNavTree('battery_8cpp.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6e3478b600a20449c8636337d2a5a85d" id="r_a6e3478b600a20449c8636337d2a5a85d"><td class="memItemLeft" align="right" valign="top"><a id="a6e3478b600a20449c8636337d2a5a85d" name="a6e3478b600a20449c8636337d2a5a85d"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>readBattery_raw</b> ()</td></tr>
-<tr class="memitem:ae302b1da4de2e3e386fa669bd8c27d99" id="r_ae302b1da4de2e3e386fa669bd8c27d99"><td class="memItemLeft" align="right" valign="top"><a id="ae302b1da4de2e3e386fa669bd8c27d99" name="ae302b1da4de2e3e386fa669bd8c27d99"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>readBattery_volts</b> ()</td></tr>
+<tr class="memitem:a6e3478b600a20449c8636337d2a5a85d" id="r_a6e3478b600a20449c8636337d2a5a85d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e3478b600a20449c8636337d2a5a85d">readBattery_raw</a> ()</td></tr>
+<tr class="memdesc:a6e3478b600a20449c8636337d2a5a85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read raw ADC value from battery pin.  <br /></td></tr>
+<tr class="memitem:ae302b1da4de2e3e386fa669bd8c27d99" id="r_ae302b1da4de2e3e386fa669bd8c27d99"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae302b1da4de2e3e386fa669bd8c27d99">readBattery_volts</a> ()</td></tr>
+<tr class="memdesc:ae302b1da4de2e3e386fa669bd8c27d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read battery voltage in volts.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Battery management implementation for the lolinESP32 phone project. </p>
 <dl class="section author"><dt>Author</dt><dd>smookie77 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-06-02 </dd></dl>
-</div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2025-06-02</dd></dl>
+<p>Implements functions for reading battery voltage and raw ADC values. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a6e3478b600a20449c8636337d2a5a85d" name="a6e3478b600a20449c8636337d2a5a85d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3478b600a20449c8636337d2a5a85d">&#9670;&#160;</a></span>readBattery_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t readBattery_raw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read raw ADC value from battery pin. </p>
+<dl class="section return"><dt>Returns</dt><dd>Raw ADC value. </dd></dl>
+
+</div>
+</div>
+<a id="ae302b1da4de2e3e386fa669bd8c27d99" name="ae302b1da4de2e3e386fa669bd8c27d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae302b1da4de2e3e386fa669bd8c27d99">&#9670;&#160;</a></span>readBattery_volts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float readBattery_volts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read battery voltage in volts. </p>
+<dl class="section return"><dt>Returns</dt><dd>Battery voltage as float. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

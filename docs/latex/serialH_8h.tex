@@ -1,0 +1,117 @@
+\doxysection{lib/serial\+Handler/serialH.h File Reference}
+\hypertarget{serialH_8h}{}\label{serialH_8h}\index{lib/serialHandler/serialH.h@{lib/serialHandler/serialH.h}}
+
+
+Serial handler interface for buffered, multi-\/task serial output.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$esp32-\/hal-\/uart.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{serialH_8h_a94df10e7efe7613d074c105099c7fd0e}\label{serialH_8h_a94df10e7efe7613d074c105099c7fd0e} 
+\#define {\bfseries SERIAL\+\_\+\+BAUD}~2000000
+\item 
+\Hypertarget{serialH_8h_a0b8bd32d94cfc9b2981fb21cd04b37db}\label{serialH_8h_a0b8bd32d94cfc9b2981fb21cd04b37db} 
+\#define {\bfseries SERIAL\+\_\+\+TASK\+\_\+\+DISPLAY}~0
+\begin{DoxyCompactList}\small\item\em Task ID for display-\/related serial output. \end{DoxyCompactList}\item 
+\Hypertarget{serialH_8h_acd08712874dad713b918c4fe403e991e}\label{serialH_8h_acd08712874dad713b918c4fe403e991e} 
+\#define {\bfseries SERIAL\+\_\+\+TASK\+\_\+\+OTHER1}~1
+\begin{DoxyCompactList}\small\item\em Task ID for miscellaneous serial output 1. \end{DoxyCompactList}\item 
+\Hypertarget{serialH_8h_ae52e3a10d7fcd72fc18be89bf9baee8c}\label{serialH_8h_ae52e3a10d7fcd72fc18be89bf9baee8c} 
+\#define {\bfseries SERIAL\+\_\+\+TASK\+\_\+\+OTHER2}~2
+\begin{DoxyCompactList}\small\item\em Task ID for miscellaneous serial output 2. \end{DoxyCompactList}\item 
+\Hypertarget{serialH_8h_ad9bd0a604283bd2594a4c61bf2396d5f}\label{serialH_8h_ad9bd0a604283bd2594a4c61bf2396d5f} 
+\#define {\bfseries SERIAL\+\_\+\+TASK\+\_\+\+OTHER3}~3
+\begin{DoxyCompactList}\small\item\em Task ID for miscellaneous serial output 3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{serialH_8h_aa116b54fcabc8574ea05b7bdaa40e352}{serial\+\_\+handler\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the serial handler and its buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{serialH_8h_a81405539e4a220dc349cc7665b938439}{Serial\+Handler\+\_\+code}} (void \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Task code for the serial handler. Flushes all buffers to UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{serialH_8h_a0d7b835fdeb323974166bb8ccb3376ad}{serial\+\_\+buffer\+\_\+write}} (int task\+\_\+id, const char \texorpdfstring{$\ast$}{*}data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Write data to a task\textquotesingle{}s serial buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serial handler interface for buffered, multi-\/task serial output. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/04
+\end{DoxyDate}
+Provides functions and macros for managing per-\/task serial output buffers and a handler task that flushes them to the UART. 
+
+\label{doc-func-members}
+\Hypertarget{serialH_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{serialH_8h_a0d7b835fdeb323974166bb8ccb3376ad}\index{serialH.h@{serialH.h}!serial\_buffer\_write@{serial\_buffer\_write}}
+\index{serial\_buffer\_write@{serial\_buffer\_write}!serialH.h@{serialH.h}}
+\doxysubsubsection{\texorpdfstring{serial\_buffer\_write()}{serial\_buffer\_write()}}
+{\footnotesize\ttfamily \label{serialH_8h_a0d7b835fdeb323974166bb8ccb3376ad} 
+void serial\+\_\+buffer\+\_\+write (\begin{DoxyParamCaption}\item[{int}]{task\+\_\+id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Write data to a task\textquotesingle{}s serial buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+\_\+id} & Task buffer index (0..3). \\
+\hline
+{\em data} & Pointer to data to write. \\
+\hline
+{\em len} & Number of bytes to write.\\
+\hline
+\end{DoxyParams}
+Write data to a task\textquotesingle{}s serial buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+\_\+id} & Task buffer index (0..SERIAL\+\_\+\+TASK\+\_\+\+COUNT-\/1). \\
+\hline
+{\em data} & Pointer to data to write. \\
+\hline
+{\em len} & Number of bytes to write. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{serialH_8h_aa116b54fcabc8574ea05b7bdaa40e352}\index{serialH.h@{serialH.h}!serial\_handler\_init@{serial\_handler\_init}}
+\index{serial\_handler\_init@{serial\_handler\_init}!serialH.h@{serialH.h}}
+\doxysubsubsection{\texorpdfstring{serial\_handler\_init()}{serial\_handler\_init()}}
+{\footnotesize\ttfamily \label{serialH_8h_aa116b54fcabc8574ea05b7bdaa40e352} 
+void serial\+\_\+handler\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the serial handler and its buffers. 
+
+Initialize the serial handler and its buffers. \Hypertarget{serialH_8h_a81405539e4a220dc349cc7665b938439}\index{serialH.h@{serialH.h}!SerialHandler\_code@{SerialHandler\_code}}
+\index{SerialHandler\_code@{SerialHandler\_code}!serialH.h@{serialH.h}}
+\doxysubsubsection{\texorpdfstring{SerialHandler\_code()}{SerialHandler\_code()}}
+{\footnotesize\ttfamily \label{serialH_8h_a81405539e4a220dc349cc7665b938439} 
+void Serial\+Handler\+\_\+code (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Task code for the serial handler. Flushes all buffers to UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Unused parameter for Free\+RTOS task signature.\\
+\hline
+\end{DoxyParams}
+Task code for the serial handler. Flushes all buffers to UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Unused parameter for Free\+RTOS task signature. \\
+\hline
+\end{DoxyParams}

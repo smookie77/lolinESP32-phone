@@ -6,6 +6,8 @@ Display driver implementation for the lolin\+ESP32 phone project.
 
 
 {\ttfamily \#include $<$display.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
+{\ttfamily \#include $<$string\+\_\+utils.\+h$>$}\newline
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,21 +19,19 @@ enum {\bfseries display\+Mode\+\_\+e} \{ {\bfseries display\+Mode\+\_\+boot}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1}\label{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1} 
-void {\bfseries display\+\_\+init} ()
+void \mbox{\hyperlink{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1}{display\+\_\+init}} ()
 \begin{DoxyCompactList}\small\item\em Initialize the LCD dislpay. \end{DoxyCompactList}\item 
-\Hypertarget{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d}\label{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d} 
-void {\bfseries display\+Task\+\_\+code} (void \texorpdfstring{$\ast$}{*}params)
+void \mbox{\hyperlink{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d}{display\+Task\+\_\+code}} (void \texorpdfstring{$\ast$}{*}params)
 \begin{DoxyCompactList}\small\item\em Infinetely running code for the display functionality. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{display_8cpp_a560fad537460ccbe67d34fe45553af8f}\label{display_8cpp_a560fad537460ccbe67d34fe45553af8f} 
 Adafruit\+\_\+\+PCD8544 {\bfseries display} = Adafruit\+\_\+\+PCD8544( 2 , 15 , 13 )
-\item 
+\begin{DoxyCompactList}\small\item\em Global display object for Nokia 5110 LCD. \end{DoxyCompactList}\item 
 \Hypertarget{display_8cpp_a92c6e37eb22a3715d8deee4f1bde57ac}\label{display_8cpp_a92c6e37eb22a3715d8deee4f1bde57ac} 
 Task\+Handle\+\_\+t {\bfseries display\+Task}
-\item 
+\begin{DoxyCompactList}\small\item\em Handle for the display Free\+RTOS task. \end{DoxyCompactList}\item 
 \Hypertarget{display_8cpp_a8098a149864b1ea4e2b1e10854cdd023}\label{display_8cpp_a8098a149864b1ea4e2b1e10854cdd023} 
 display\+Mode\+\_\+e {\bfseries current\+\_\+display\+Mode} = display\+Mode\+\_\+boot
 \end{DoxyCompactItemize}
@@ -47,5 +47,31 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Implements display initialization and task management. 
+
+\label{doc-func-members}
+\Hypertarget{display_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1}\index{display.cpp@{display.cpp}!display\_init@{display\_init}}
+\index{display\_init@{display\_init}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_init()}{display\_init()}}
+{\footnotesize\ttfamily \label{display_8cpp_a8d41c12af4f6e6faad84e1f21f99b3e1} 
+void display\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the LCD dislpay. 
+
+Initialize the LCD display and start the display task. \Hypertarget{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d}\index{display.cpp@{display.cpp}!displayTask\_code@{displayTask\_code}}
+\index{displayTask\_code@{displayTask\_code}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{displayTask\_code()}{displayTask\_code()}}
+{\footnotesize\ttfamily \label{display_8cpp_a9014901d3fcecb4c933165e97d3bb75d} 
+void display\+Task\+\_\+code (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Infinetely running code for the display functionality. 
+
+Free\+RTOS task code for display functionality. 

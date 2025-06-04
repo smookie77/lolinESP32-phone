@@ -93,21 +93,30 @@ $(function(){initNavTree('keyboard_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="keyboard_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef KEYBOARD_H_</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define KEYBOARD_H_</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;Keypad.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">extern</span> <span class="keyword">volatile</span> <span class="keywordtype">char</span> keyboard_pressedKey;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> TaskHandle_t keyboard_Task;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> keyboard_init();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> keyboard_TaskCode(<span class="keywordtype">void</span> * params);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">char</span> keyboard_getKey();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//KEYBOARD_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef KEYBOARD_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define KEYBOARD_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Keypad.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="serialH_8h.html">serialH.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">extern</span> <span class="keyword">volatile</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="keyboard_8cpp.html#ac0b07d9ea8814ed34ebaf77df61d1309">keyboard_pressedKey</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">extern</span> TaskHandle_t <a class="code hl_variable" href="keyboard_8cpp.html#a79a0f3e539339f65035d34b48ff48cee">keyboard_Task</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="keyboard_8h.html#aaeb4e4a3c4813ee1efc6b98bba9ec781">keyboard_init</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="keyboard_8h.html#ab20c58f7874c7cc085ace4423dfa9692">keyboard_TaskCode</a>(<span class="keywordtype">void</span> * params);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">char</span> <a class="code hl_function" href="keyboard_8h.html#a4d7f0c28b64442ea519eb5aa6cd72319">keyboard_getKey</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">//KEYBOARD_H_</span></div>
+<div class="ttc" id="akeyboard_8cpp_html_a79a0f3e539339f65035d34b48ff48cee"><div class="ttname"><a href="keyboard_8cpp.html#a79a0f3e539339f65035d34b48ff48cee">keyboard_Task</a></div><div class="ttdeci">TaskHandle_t keyboard_Task</div><div class="ttdoc">Handle for the keyboard FreeRTOS task.</div><div class="ttdef"><b>Definition</b> keyboard.cpp:13</div></div>
+<div class="ttc" id="akeyboard_8cpp_html_ac0b07d9ea8814ed34ebaf77df61d1309"><div class="ttname"><a href="keyboard_8cpp.html#ac0b07d9ea8814ed34ebaf77df61d1309">keyboard_pressedKey</a></div><div class="ttdeci">volatile char keyboard_pressedKey</div><div class="ttdoc">Last pressed key (volatile, updated by keyboard task).</div><div class="ttdef"><b>Definition</b> keyboard.cpp:12</div></div>
+<div class="ttc" id="akeyboard_8h_html_a4d7f0c28b64442ea519eb5aa6cd72319"><div class="ttname"><a href="keyboard_8h.html#a4d7f0c28b64442ea519eb5aa6cd72319">keyboard_getKey</a></div><div class="ttdeci">char keyboard_getKey()</div><div class="ttdoc">Get and clear the last pressed key.</div><div class="ttdef"><b>Definition</b> keyboard.cpp:44</div></div>
+<div class="ttc" id="akeyboard_8h_html_aaeb4e4a3c4813ee1efc6b98bba9ec781"><div class="ttname"><a href="keyboard_8h.html#aaeb4e4a3c4813ee1efc6b98bba9ec781">keyboard_init</a></div><div class="ttdeci">void keyboard_init()</div><div class="ttdoc">Initialize the keyboard hardware and task.</div><div class="ttdef"><b>Definition</b> keyboard.cpp:35</div></div>
+<div class="ttc" id="akeyboard_8h_html_ab20c58f7874c7cc085ace4423dfa9692"><div class="ttname"><a href="keyboard_8h.html#ab20c58f7874c7cc085ace4423dfa9692">keyboard_TaskCode</a></div><div class="ttdeci">void keyboard_TaskCode(void *params)</div><div class="ttdoc">FreeRTOS task code for keyboard scanning.</div><div class="ttdef"><b>Definition</b> keyboard.cpp:54</div></div>
+<div class="ttc" id="aserialH_8h_html"><div class="ttname"><a href="serialH_8h.html">serialH.h</a></div><div class="ttdoc">Serial handler interface for buffered, multi-task serial output.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -97,31 +97,101 @@ $(function(){initNavTree('keyboard_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;Keypad.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="serialH_8h_source.html">serialH.h</a>&gt;</code><br />
 </div>
 <p><a href="keyboard_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaeb4e4a3c4813ee1efc6b98bba9ec781" id="r_aaeb4e4a3c4813ee1efc6b98bba9ec781"><td class="memItemLeft" align="right" valign="top"><a id="aaeb4e4a3c4813ee1efc6b98bba9ec781" name="aaeb4e4a3c4813ee1efc6b98bba9ec781"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_init</b> ()</td></tr>
-<tr class="memitem:ab20c58f7874c7cc085ace4423dfa9692" id="r_ab20c58f7874c7cc085ace4423dfa9692"><td class="memItemLeft" align="right" valign="top"><a id="ab20c58f7874c7cc085ace4423dfa9692" name="ab20c58f7874c7cc085ace4423dfa9692"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_TaskCode</b> (void *params)</td></tr>
-<tr class="memitem:a4d7f0c28b64442ea519eb5aa6cd72319" id="r_a4d7f0c28b64442ea519eb5aa6cd72319"><td class="memItemLeft" align="right" valign="top"><a id="a4d7f0c28b64442ea519eb5aa6cd72319" name="a4d7f0c28b64442ea519eb5aa6cd72319"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_getKey</b> ()</td></tr>
+<tr class="memitem:aaeb4e4a3c4813ee1efc6b98bba9ec781" id="r_aaeb4e4a3c4813ee1efc6b98bba9ec781"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeb4e4a3c4813ee1efc6b98bba9ec781">keyboard_init</a> ()</td></tr>
+<tr class="memdesc:aaeb4e4a3c4813ee1efc6b98bba9ec781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the keyboard hardware and task.  <br /></td></tr>
+<tr class="memitem:ab20c58f7874c7cc085ace4423dfa9692" id="r_ab20c58f7874c7cc085ace4423dfa9692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20c58f7874c7cc085ace4423dfa9692">keyboard_TaskCode</a> (void *params)</td></tr>
+<tr class="memdesc:ab20c58f7874c7cc085ace4423dfa9692"><td class="mdescLeft">&#160;</td><td class="mdescRight">FreeRTOS task code for keyboard scanning.  <br /></td></tr>
+<tr class="memitem:a4d7f0c28b64442ea519eb5aa6cd72319" id="r_a4d7f0c28b64442ea519eb5aa6cd72319"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d7f0c28b64442ea519eb5aa6cd72319">keyboard_getKey</a> ()</td></tr>
+<tr class="memdesc:a4d7f0c28b64442ea519eb5aa6cd72319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get and clear the last pressed key.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ac0b07d9ea8814ed34ebaf77df61d1309" id="r_ac0b07d9ea8814ed34ebaf77df61d1309"><td class="memItemLeft" align="right" valign="top"><a id="ac0b07d9ea8814ed34ebaf77df61d1309" name="ac0b07d9ea8814ed34ebaf77df61d1309"></a>
 volatile char&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_pressedKey</b></td></tr>
+<tr class="memdesc:ac0b07d9ea8814ed34ebaf77df61d1309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last pressed key (volatile, updated by keyboard task). <br /></td></tr>
 <tr class="memitem:a79a0f3e539339f65035d34b48ff48cee" id="r_a79a0f3e539339f65035d34b48ff48cee"><td class="memItemLeft" align="right" valign="top"><a id="a79a0f3e539339f65035d34b48ff48cee" name="a79a0f3e539339f65035d34b48ff48cee"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_Task</b></td></tr>
+<tr class="memdesc:a79a0f3e539339f65035d34b48ff48cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle for the keyboard FreeRTOS task. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Keyboard driver interface for the lolinESP32 phone project. </p>
 <dl class="section author"><dt>Author</dt><dd>smookie77 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-06-02 </dd></dl>
-</div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2025-06-02</dd></dl>
+<p>Provides functions and variables for keyboard input handling. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a4d7f0c28b64442ea519eb5aa6cd72319" name="a4d7f0c28b64442ea519eb5aa6cd72319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7f0c28b64442ea519eb5aa6cd72319">&#9670;&#160;</a></span>keyboard_getKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char keyboard_getKey </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get and clear the last pressed key. </p>
+<dl class="section return"><dt>Returns</dt><dd>The last pressed key, or '\0' if none. </dd></dl>
+
+</div>
+</div>
+<a id="aaeb4e4a3c4813ee1efc6b98bba9ec781" name="aaeb4e4a3c4813ee1efc6b98bba9ec781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb4e4a3c4813ee1efc6b98bba9ec781">&#9670;&#160;</a></span>keyboard_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyboard_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the keyboard hardware and task. </p>
+<p>Initialize the keyboard hardware and task. </p>
+
+</div>
+</div>
+<a id="ab20c58f7874c7cc085ace4423dfa9692" name="ab20c58f7874c7cc085ace4423dfa9692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20c58f7874c7cc085ace4423dfa9692">&#9670;&#160;</a></span>keyboard_TaskCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyboard_TaskCode </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>params</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FreeRTOS task code for keyboard scanning. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td>Unused parameter for FreeRTOS task signature. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

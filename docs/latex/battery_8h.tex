@@ -6,27 +6,26 @@ Battery management interface for the lolin\+ESP32 phone project.
 
 
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{battery_8h_a42e8ab42859d55372391d2ec2096ea26}\label{battery_8h_a42e8ab42859d55372391d2ec2096ea26} 
 \#define {\bfseries BATTERY\+\_\+\+ADC\+\_\+\+PIN}~35
-\item 
+\begin{DoxyCompactList}\small\item\em ADC pin for battery voltage measurement. \end{DoxyCompactList}\item 
 \Hypertarget{battery_8h_a8959e4f9ebdf476605dda7e582b950e4}\label{battery_8h_a8959e4f9ebdf476605dda7e582b950e4} 
 \#define {\bfseries BATTERY\+\_\+\+VOLDIV\+\_\+\+RATIO}~1
-\item 
+\begin{DoxyCompactList}\small\item\em Voltage divider ratio. \end{DoxyCompactList}\item 
 \Hypertarget{battery_8h_ae4c2311ba39e3f99879ed7c46561293f}\label{battery_8h_ae4c2311ba39e3f99879ed7c46561293f} 
 \#define {\bfseries BATTERY\+\_\+\+ADC\+\_\+\+SHIFT}~0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ADC shift value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{battery_8h_a6e3478b600a20449c8636337d2a5a85d}\label{battery_8h_a6e3478b600a20449c8636337d2a5a85d} 
-uint16\+\_\+t {\bfseries read\+Battery\+\_\+raw} ()
-\item 
-\Hypertarget{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99}\label{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99} 
-float {\bfseries read\+Battery\+\_\+volts} ()
-\end{DoxyCompactItemize}
+uint16\+\_\+t \mbox{\hyperlink{battery_8h_a6e3478b600a20449c8636337d2a5a85d}{read\+Battery\+\_\+raw}} ()
+\begin{DoxyCompactList}\small\item\em Read raw ADC value from battery pin. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99}{read\+Battery\+\_\+volts}} ()
+\begin{DoxyCompactList}\small\item\em Read battery voltage in volts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,5 +38,36 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Provides functions for reading battery voltage and raw ADC values. 
+
+\label{doc-func-members}
+\Hypertarget{battery_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{battery_8h_a6e3478b600a20449c8636337d2a5a85d}\index{battery.h@{battery.h}!readBattery\_raw@{readBattery\_raw}}
+\index{readBattery\_raw@{readBattery\_raw}!battery.h@{battery.h}}
+\doxysubsubsection{\texorpdfstring{readBattery\_raw()}{readBattery\_raw()}}
+{\footnotesize\ttfamily \label{battery_8h_a6e3478b600a20449c8636337d2a5a85d} 
+uint16\+\_\+t read\+Battery\+\_\+raw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read raw ADC value from battery pin. 
+
+\begin{DoxyReturn}{Returns}
+Raw ADC value. 
+\end{DoxyReturn}
+\Hypertarget{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99}\index{battery.h@{battery.h}!readBattery\_volts@{readBattery\_volts}}
+\index{readBattery\_volts@{readBattery\_volts}!battery.h@{battery.h}}
+\doxysubsubsection{\texorpdfstring{readBattery\_volts()}{readBattery\_volts()}}
+{\footnotesize\ttfamily \label{battery_8h_ae302b1da4de2e3e386fa669bd8c27d99} 
+float read\+Battery\+\_\+volts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read battery voltage in volts. 
+
+\begin{DoxyReturn}{Returns}
+Battery voltage as float. 
+\end{DoxyReturn}

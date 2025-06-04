@@ -3,20 +3,23 @@
 \mbox{\hyperlink{keyboard_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ KEYBOARD\_H\_}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ KEYBOARD\_H\_}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Keypad.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ KEYBOARD\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ KEYBOARD\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Keypad.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{serialH_8h}{serialH.h}}>}}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{char}\ keyboard\_pressedKey;}
-\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ TaskHandle\_t\ keyboard\_Task;}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ keyboard\_init();}
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ keyboard\_TaskCode(\textcolor{keywordtype}{void}\ *\ params);}
-\DoxyCodeLine{00022\ \textcolor{keywordtype}{char}\ keyboard\_getKey();}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//KEYBOARD\_H\_}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keyboard_8cpp_ac0b07d9ea8814ed34ebaf77df61d1309}{keyboard\_pressedKey}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ TaskHandle\_t\ \mbox{\hyperlink{keyboard_8cpp_a79a0f3e539339f65035d34b48ff48cee}{keyboard\_Task}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{keyboard_8h_aaeb4e4a3c4813ee1efc6b98bba9ec781}{keyboard\_init}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{keyboard_8h_ab20c58f7874c7cc085ace4423dfa9692}{keyboard\_TaskCode}}(\textcolor{keywordtype}{void}\ *\ params);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{keyboard_8h_a4d7f0c28b64442ea519eb5aa6cd72319}{keyboard\_getKey}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//KEYBOARD\_H\_}}
 
 \end{DoxyCode}

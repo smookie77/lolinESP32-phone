@@ -9,12 +9,10 @@ Battery management implementation for the lolin\+ESP32 phone project.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{battery_8cpp_a6e3478b600a20449c8636337d2a5a85d}\label{battery_8cpp_a6e3478b600a20449c8636337d2a5a85d} 
-uint16\+\_\+t {\bfseries read\+Battery\+\_\+raw} ()
-\item 
-\Hypertarget{battery_8cpp_ae302b1da4de2e3e386fa669bd8c27d99}\label{battery_8cpp_ae302b1da4de2e3e386fa669bd8c27d99} 
-float {\bfseries read\+Battery\+\_\+volts} ()
-\end{DoxyCompactItemize}
+uint16\+\_\+t \mbox{\hyperlink{battery_8cpp_a6e3478b600a20449c8636337d2a5a85d}{read\+Battery\+\_\+raw}} ()
+\begin{DoxyCompactList}\small\item\em Read raw ADC value from battery pin. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{battery_8cpp_ae302b1da4de2e3e386fa669bd8c27d99}{read\+Battery\+\_\+volts}} ()
+\begin{DoxyCompactList}\small\item\em Read battery voltage in volts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,5 +25,36 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Implements functions for reading battery voltage and raw ADC values. 
+
+\label{doc-func-members}
+\Hypertarget{battery_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{battery_8cpp_a6e3478b600a20449c8636337d2a5a85d}\index{battery.cpp@{battery.cpp}!readBattery\_raw@{readBattery\_raw}}
+\index{readBattery\_raw@{readBattery\_raw}!battery.cpp@{battery.cpp}}
+\doxysubsubsection{\texorpdfstring{readBattery\_raw()}{readBattery\_raw()}}
+{\footnotesize\ttfamily \label{battery_8cpp_a6e3478b600a20449c8636337d2a5a85d} 
+uint16\+\_\+t read\+Battery\+\_\+raw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read raw ADC value from battery pin. 
+
+\begin{DoxyReturn}{Returns}
+Raw ADC value. 
+\end{DoxyReturn}
+\Hypertarget{battery_8cpp_ae302b1da4de2e3e386fa669bd8c27d99}\index{battery.cpp@{battery.cpp}!readBattery\_volts@{readBattery\_volts}}
+\index{readBattery\_volts@{readBattery\_volts}!battery.cpp@{battery.cpp}}
+\doxysubsubsection{\texorpdfstring{readBattery\_volts()}{readBattery\_volts()}}
+{\footnotesize\ttfamily \label{battery_8cpp_ae302b1da4de2e3e386fa669bd8c27d99} 
+float read\+Battery\+\_\+volts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read battery voltage in volts. 
+
+\begin{DoxyReturn}{Returns}
+Battery voltage as float. 
+\end{DoxyReturn}

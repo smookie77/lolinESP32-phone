@@ -2,7 +2,7 @@
 \hypertarget{string__utils_8cpp}{}\label{string__utils_8cpp}\index{lib/utils/string\_utils.cpp@{lib/utils/string\_utils.cpp}}
 
 
-String utility functions for the lolin\+ESP32 phone project.  
+Implementation of string utility functions for the lolin\+ESP32 phone project.  
 
 
 {\ttfamily \#include "{}string\+\_\+utils.\+h"{}}\newline
@@ -15,13 +15,12 @@ String utility functions for the lolin\+ESP32 phone project.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{string__utils_8cpp_aeacdf35f6be2decc020e396f365d0c63}\label{string__utils_8cpp_aeacdf35f6be2decc020e396f365d0c63} 
-char \texorpdfstring{$\ast$}{*} {\bfseries format\+\_\+string} (const char \texorpdfstring{$\ast$}{*}restrict,...)
-\end{DoxyCompactItemize}
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{string__utils_8cpp_aeacdf35f6be2decc020e396f365d0c63}{format\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}restrict,...)
+\begin{DoxyCompactList}\small\item\em Format a string with variable arguments and write to serial buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-String utility functions for the lolin\+ESP32 phone project. 
+Implementation of string utility functions for the lolin\+ESP32 phone project. 
 
 \begin{DoxyAuthor}{Author}
 smookie77 
@@ -30,5 +29,32 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Provides formatting utilities for strings. 
+
+\label{doc-func-members}
+\Hypertarget{string__utils_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{string__utils_8cpp_aeacdf35f6be2decc020e396f365d0c63}\index{string\_utils.cpp@{string\_utils.cpp}!format\_string@{format\_string}}
+\index{format\_string@{format\_string}!string\_utils.cpp@{string\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}}
+{\footnotesize\ttfamily \label{string__utils_8cpp_aeacdf35f6be2decc020e396f365d0c63} 
+char \texorpdfstring{$\ast$}{*} format\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{restrict}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+Format a string with variable arguments and write to serial buffer. 
+
+Format a string with variable arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em restrict} & Format string (printf-\/style). \\
+\hline
+{\em ...} & Arguments for formatting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a static buffer containing the formatted string. 
+\end{DoxyReturn}

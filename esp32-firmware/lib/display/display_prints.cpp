@@ -4,7 +4,6 @@
  *
  * Implements functions for printing text and menus to the display.
  */
-
 #include <display_prints.h>
 #include <serialH.h>
 #include <string_utils.h>
@@ -13,12 +12,12 @@ extern Adafruit_PCD8544 display;
 
 
 
-/*!
-    @brief   Make a simple menu on the LCD
-    @param  size Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24
-    @param  rows How many lines are in the text string
-    @param  text C string, separete every row with new line char
-*/
+/**
+ * @brief Print a scrolling menu to the display.
+ * @param size Font size.
+ * @param rows Number of rows in the text.
+ * @param text Text to display, with lines separated by '\n'.
+ */
 void display_print_ScrollingMenu(uint8_t size, uint8_t rows, char* text) {
     display.setTextSize(size);
     
@@ -48,49 +47,46 @@ void display_print_ScrollingMenu(uint8_t size, uint8_t rows, char* text) {
     }
 }
 
-/*!
-    @brief   Print a given string to the LCD
-    @param  str  A NULL terminated C string
-*/
+/**
+ * @brief Print a string to the display.
+ * @param str Null-terminated string.
+ */
 void display_print(char * str){
 	display.setTextSize(LCD_DEFAULT_FONTSIZE);
 	display.print(str);
 	serial_buffer_write(SERIAL_TASK_DISPLAY, str, strlen(str));
 }
 
-
-/*!
-    @brief   Print a given string to the LCD, with an option to change the font size
-    @param  str  A NULL terminated C string
-    @param  size Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24
-*/
+/**
+ * @brief Print a string to the display with specified font size.
+ * @param str Null-terminated string.
+ * @param size Font size.
+ */
 void display_print(char * str, uint8_t size){
 	display.setTextSize(size);
 	display.print(str);
 	serial_buffer_write(SERIAL_TASK_DISPLAY, str, strlen(str));
 }
 
-
-/*!
-    @brief   Print a given string to the LCD, with an option to change the font size and the row
-    @param  str  A NULL terminated C string
-    @param  size Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24
-    @param  row  On which start of the line on LCD to print the string
-*/
+/**
+ * @brief Print a string to the display with font size and row.
+ * @param str Null-terminated string.
+ * @param size Font size.
+ * @param row Row index.
+ */
 void display_print(char * str, uint8_t size,  uint8_t row){
 	display.setTextSize(size);
 	display.setCursor(0,row*size*8);
 	display.printf(str);
 }
 
-
-/*!
-    @brief   Print a given string to the LCD, with an option to change the font size, and text's position
-    @param  str  A NULL terminated C string
-    @param  size Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24
-    @param  x  X coordinate of the desired print place of the string
-    @param  y  Y coordinate of the desired print place of the string
-*/
+/**
+ * @brief Print a string to the display with font size and position.
+ * @param str Null-terminated string.
+ * @param size Font size.
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ */
 void display_print(char * str, uint8_t size, uint8_t x, uint8_t y){
 	display.setTextSize(size);
 	display.setCursor(x, y);

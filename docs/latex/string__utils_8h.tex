@@ -7,12 +7,12 @@ String utility functions for the lolin\+ESP32 phone project.
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{string__utils_8h_aeacdf35f6be2decc020e396f365d0c63}\label{string__utils_8h_aeacdf35f6be2decc020e396f365d0c63} 
-char \texorpdfstring{$\ast$}{*} {\bfseries format\+\_\+string} (const char \texorpdfstring{$\ast$}{*}restrict,...)
-\end{DoxyCompactItemize}
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{string__utils_8h_aeacdf35f6be2decc020e396f365d0c63}{format\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}restrict,...)
+\begin{DoxyCompactList}\small\item\em Format a string with variable arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -25,5 +25,42 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Provides formatting utilities for strings. 
+
+\label{doc-func-members}
+\Hypertarget{string__utils_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{string__utils_8h_aeacdf35f6be2decc020e396f365d0c63}\index{string\_utils.h@{string\_utils.h}!format\_string@{format\_string}}
+\index{format\_string@{format\_string}!string\_utils.h@{string\_utils.h}}
+\doxysubsubsection{\texorpdfstring{format\_string()}{format\_string()}}
+{\footnotesize\ttfamily \label{string__utils_8h_aeacdf35f6be2decc020e396f365d0c63} 
+char \texorpdfstring{$\ast$}{*} format\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{restrict}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+Format a string with variable arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format string (printf-\/style). \\
+\hline
+{\em ...} & Arguments for formatting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a static buffer containing the formatted string.
+\end{DoxyReturn}
+Format a string with variable arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em restrict} & Format string (printf-\/style). \\
+\hline
+{\em ...} & Arguments for formatting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a static buffer containing the formatted string. 
+\end{DoxyReturn}

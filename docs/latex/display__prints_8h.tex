@@ -6,25 +6,26 @@ Print utilities for the Nokia 5110 LCD display.
 
 
 {\ttfamily \#include $<$display.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{display__prints_8h_aa8941a9e51687ca46086ae67af292ca3}\label{display__prints_8h_aa8941a9e51687ca46086ae67af292ca3} 
 \#define {\bfseries LCD\+\_\+\+DEFAULT\+\_\+\+FONTSIZE}~1
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Default font size for display text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{display__prints_8h_ad8b11cf27730291193fb55ab009270cc}{display\+\_\+print\+\_\+\+Scrolling\+Menu}} (uint8\+\_\+t size, uint8\+\_\+t rows, char \texorpdfstring{$\ast$}{*}text)
-\begin{DoxyCompactList}\small\item\em Make a simple menu on the LCD. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Print a scrolling menu to the display. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{display__prints_8h_a07498ecff9923eb17ed256ff8ce6cf04}{display\+\_\+print}} (char \texorpdfstring{$\ast$}{*}str)
-\begin{DoxyCompactList}\small\item\em Print a given string to the LCD. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Print a string to the display. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{display__prints_8h_a5d079197900a87f5779c78ec83e26e18}{display\+\_\+print}} (char \texorpdfstring{$\ast$}{*}str, uint8\+\_\+t size)
-\begin{DoxyCompactList}\small\item\em Print a given string to the LCD, with an option to change the font size. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Print a string to the display with specified font size. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{display__prints_8h_aa3773a224be8132e46c4f9447d6552b1}{display\+\_\+print}} (char \texorpdfstring{$\ast$}{*}str, uint8\+\_\+t size, uint8\+\_\+t row)
-\begin{DoxyCompactList}\small\item\em Print a given string to the LCD, with an option to change the font size and the row. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Print a string to the display with font size and row. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{display__prints_8h_a3b646b0e8939600d49325a4a20fcdfe5}{display\+\_\+print}} (char \texorpdfstring{$\ast$}{*}str, uint8\+\_\+t size, uint8\+\_\+t x, uint8\+\_\+t y)
-\begin{DoxyCompactList}\small\item\em Print a given string to the LCD, with an option to change the font size, and text\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print a string to the display with font size and position. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -43,11 +44,11 @@ void display\+\_\+print (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\a
 
 
 
-Print a given string to the LCD. 
+Print a string to the display. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & A NULL terminated C string \\
+{\em str} & Null-\/terminated string. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{display__prints_8h_a5d079197900a87f5779c78ec83e26e18}\index{display\_prints.h@{display\_prints.h}!display\_print@{display\_print}}
@@ -58,13 +59,13 @@ void display\+\_\+print (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\a
 
 
 
-Print a given string to the LCD, with an option to change the font size. 
+Print a string to the display with specified font size. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & A NULL terminated C string \\
+{\em str} & Null-\/terminated string. \\
 \hline
-{\em size} & Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 \\
+{\em size} & Font size. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{display__prints_8h_aa3773a224be8132e46c4f9447d6552b1}\index{display\_prints.h@{display\_prints.h}!display\_print@{display\_print}}
@@ -75,15 +76,15 @@ void display\+\_\+print (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\a
 
 
 
-Print a given string to the LCD, with an option to change the font size and the row. 
+Print a string to the display with font size and row. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & A NULL terminated C string \\
+{\em str} & Null-\/terminated string. \\
 \hline
-{\em size} & Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 \\
+{\em size} & Font size. \\
 \hline
-{\em row} & On which start of the line on LCD to print the string \\
+{\em row} & Row index. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{display__prints_8h_a3b646b0e8939600d49325a4a20fcdfe5}\index{display\_prints.h@{display\_prints.h}!display\_print@{display\_print}}
@@ -94,17 +95,17 @@ void display\+\_\+print (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\a
 
 
 
-Print a given string to the LCD, with an option to change the font size, and text\textquotesingle{}s position. 
+Print a string to the display with font size and position. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & A NULL terminated C string \\
+{\em str} & Null-\/terminated string. \\
 \hline
-{\em size} & Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 \\
+{\em size} & Font size. \\
 \hline
-{\em x} & X coordinate of the desired print place of the string \\
+{\em x} & X coordinate. \\
 \hline
-{\em y} & Y coordinate of the desired print place of the string \\
+{\em y} & Y coordinate. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{display__prints_8h_ad8b11cf27730291193fb55ab009270cc}\index{display\_prints.h@{display\_prints.h}!display\_print\_ScrollingMenu@{display\_print\_ScrollingMenu}}
@@ -115,14 +116,15 @@ void display\+\_\+print\+\_\+\+Scrolling\+Menu (\begin{DoxyParamCaption}\item[{u
 
 
 
-Make a simple menu on the LCD. 
+Print a scrolling menu to the display. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em size} & Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 \\
+{\em size} & Font size. \\
 \hline
-{\em rows} & How many lines are in the text string \\
+{\em rows} & Number of rows in the text. \\
 \hline
-{\em text} & C string, separete every row with new line char \\
+{\em text} & Text to display, with lines separated by \textquotesingle{}~\newline
+\textquotesingle{}. \\
 \hline
 \end{DoxyParams}

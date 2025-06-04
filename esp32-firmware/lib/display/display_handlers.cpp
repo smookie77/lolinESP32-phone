@@ -5,8 +5,7 @@
  * @version 0.1
  * @date 2025-06-02
  * 
- * @copyright Copyright (c) 2025
- * 
+ * Implements handlers for different display modes.
  */
 #include <display_handlers.h>
 #include <display_prints.h>
@@ -16,6 +15,9 @@
 
 extern Adafruit_PCD8544 display;
 
+/**
+ * @brief Handle the display boot mode, showing system info and waiting for tasks.
+ */
 void display_handleMode_boot(){
     char bootText[128];
     snprintf(bootText, sizeof(bootText), 
@@ -37,7 +39,7 @@ void display_handleMode_boot(){
         vTaskDelay(1000/portTICK_PERIOD_MS);
     }
     display_print("*", 1, 84-6, 24);
-    while(eTaskGetState(keyboard_Task) == eInvalid) {
+    while(eTask_getState(keyboard_Task) == eInvalid) {
         vTaskDelay(1000/portTICK_PERIOD_MS);
     }
     display_print("*", 1, 84-6, 32);

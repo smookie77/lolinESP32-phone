@@ -7,20 +7,20 @@ Handlers for display modes in the lolin\+ESP32 phone project.
 
 {\ttfamily \#include $<$display\+\_\+handlers.\+h$>$}\newline
 {\ttfamily \#include $<$display\+\_\+prints.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
 {\ttfamily \#include $<$string\+\_\+utils.\+h$>$}\newline
 {\ttfamily \#include $<$battery.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{display__handlers_8cpp_a778ab612d5a0ffb06f1843f32ee9d3bc}\label{display__handlers_8cpp_a778ab612d5a0ffb06f1843f32ee9d3bc} 
-void {\bfseries display\+\_\+handle\+Mode\+\_\+boot} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{display__handlers_8cpp_a778ab612d5a0ffb06f1843f32ee9d3bc}{display\+\_\+handle\+Mode\+\_\+boot}} ()
+\begin{DoxyCompactList}\small\item\em Handle the display boot mode, showing system info and waiting for tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{display__handlers_8cpp_a560fad537460ccbe67d34fe45553af8f}\label{display__handlers_8cpp_a560fad537460ccbe67d34fe45553af8f} 
 Adafruit\+\_\+\+PCD8544 {\bfseries display}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Global display object for Nokia 5110 LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,6 +35,19 @@ smookie77
 \begin{DoxyDate}{Date}
 2025-\/06-\/02
 \end{DoxyDate}
-\begin{DoxyCopyright}{Copyright}
-Copyright (c) 2025 
-\end{DoxyCopyright}
+Implements handlers for different display modes. 
+
+\label{doc-func-members}
+\Hypertarget{display__handlers_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{display__handlers_8cpp_a778ab612d5a0ffb06f1843f32ee9d3bc}\index{display\_handlers.cpp@{display\_handlers.cpp}!display\_handleMode\_boot@{display\_handleMode\_boot}}
+\index{display\_handleMode\_boot@{display\_handleMode\_boot}!display\_handlers.cpp@{display\_handlers.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_handleMode\_boot()}{display\_handleMode\_boot()}}
+{\footnotesize\ttfamily \label{display__handlers_8cpp_a778ab612d5a0ffb06f1843f32ee9d3bc} 
+void display\+\_\+handle\+Mode\+\_\+boot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handle the display boot mode, showing system info and waiting for tasks. 
+
+Handle the display boot mode. 

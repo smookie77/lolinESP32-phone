@@ -5,7 +5,7 @@
  * @version 0.1
  * @date 2025-06-02
  * 
- * 
+ * Implements display initialization and task management.
  */
 #include <display.h>
 #include <serialH.h>

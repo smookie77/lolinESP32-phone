@@ -1,0 +1,88 @@
+\doxysection{lib/gsm/gsm.h File Reference}
+\hypertarget{gsm_8h}{}\label{gsm_8h}\index{lib/gsm/gsm.h@{lib/gsm/gsm.h}}
+
+
+Interface for GSM module handling in the lolin\+ESP32 phone project.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$serial\+H.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gsm_8h_a77ca3b2dbfa88a09e062a462a0710cf3}{gsm\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the GSM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gsm_8h_a905f4cae31a8a60cb400b9765acf94e1}{gsm\+\_\+send\+SMS}} (const char \texorpdfstring{$\ast$}{*}number, const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Send an SMS message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gsm_8h_a6c46785d7f15bce5116923db8341278f}{gsm\+\_\+make\+Call}} (const char \texorpdfstring{$\ast$}{*}number)
+\begin{DoxyCompactList}\small\item\em Make a call to a number. \end{DoxyCompactList}\item 
+\Hypertarget{gsm_8h_a224a40644a965c9a91958a2f7adb132c}\label{gsm_8h_a224a40644a965c9a91958a2f7adb132c} 
+void {\bfseries gsm\+\_\+receive\+Call} ()
+\begin{DoxyCompactList}\small\item\em Receive an incoming call. \end{DoxyCompactList}\item 
+\Hypertarget{gsm_8h_a4ffb3057fef105e85e2516c43abe5476}\label{gsm_8h_a4ffb3057fef105e85e2516c43abe5476} 
+void {\bfseries gsm\+\_\+hangup\+Call} ()
+\begin{DoxyCompactList}\small\item\em Hang up the current call. \end{DoxyCompactList}\item 
+\Hypertarget{gsm_8h_aeb9f81384121abf2187a057e53ee18e8}\label{gsm_8h_aeb9f81384121abf2187a057e53ee18e8} 
+void {\bfseries gsm\+\_\+check\+Signal\+Quality} ()
+\begin{DoxyCompactList}\small\item\em Check GSM signal quality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for GSM module handling in the lolin\+ESP32 phone project. 
+
+\begin{DoxyAuthor}{Author}
+smookie77 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/04
+\end{DoxyDate}
+Provides functions for GSM initialization, SMS, and call handling. 
+
+\label{doc-func-members}
+\Hypertarget{gsm_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{gsm_8h_a77ca3b2dbfa88a09e062a462a0710cf3}\index{gsm.h@{gsm.h}!gsm\_init@{gsm\_init}}
+\index{gsm\_init@{gsm\_init}!gsm.h@{gsm.h}}
+\doxysubsubsection{\texorpdfstring{gsm\_init()}{gsm\_init()}}
+{\footnotesize\ttfamily \label{gsm_8h_a77ca3b2dbfa88a09e062a462a0710cf3} 
+void gsm\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the GSM module. 
+
+Initialize the GSM module. \Hypertarget{gsm_8h_a6c46785d7f15bce5116923db8341278f}\index{gsm.h@{gsm.h}!gsm\_makeCall@{gsm\_makeCall}}
+\index{gsm\_makeCall@{gsm\_makeCall}!gsm.h@{gsm.h}}
+\doxysubsubsection{\texorpdfstring{gsm\_makeCall()}{gsm\_makeCall()}}
+{\footnotesize\ttfamily \label{gsm_8h_a6c46785d7f15bce5116923db8341278f} 
+void gsm\+\_\+make\+Call (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{number}{}\end{DoxyParamCaption})}
+
+
+
+Make a call to a number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Phone number to call. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{gsm_8h_a905f4cae31a8a60cb400b9765acf94e1}\index{gsm.h@{gsm.h}!gsm\_sendSMS@{gsm\_sendSMS}}
+\index{gsm\_sendSMS@{gsm\_sendSMS}!gsm.h@{gsm.h}}
+\doxysubsubsection{\texorpdfstring{gsm\_sendSMS()}{gsm\_sendSMS()}}
+{\footnotesize\ttfamily \label{gsm_8h_a905f4cae31a8a60cb400b9765acf94e1} 
+void gsm\+\_\+send\+SMS (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{number}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Send an SMS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Recipient phone number. \\
+\hline
+{\em message} & Message text. \\
+\hline
+\end{DoxyParams}

@@ -96,6 +96,8 @@ $(function(){initNavTree('display_8cpp.html','',''); });
 <p>Display driver implementation for the lolinESP32 phone project.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="display_8h_source.html">display.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="serialH_8h_source.html">serialH.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="string__utils_8h_source.html">string_utils.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -105,19 +107,19 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d41c12af4f6e6faad84e1f21f99b3e1" id="r_a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="memItemLeft" align="right" valign="top"><a id="a8d41c12af4f6e6faad84e1f21f99b3e1" name="a8d41c12af4f6e6faad84e1f21f99b3e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>display_init</b> ()</td></tr>
-<tr class="memdesc:a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD dislpay. <br /></td></tr>
-<tr class="memitem:a9014901d3fcecb4c933165e97d3bb75d" id="r_a9014901d3fcecb4c933165e97d3bb75d"><td class="memItemLeft" align="right" valign="top"><a id="a9014901d3fcecb4c933165e97d3bb75d" name="a9014901d3fcecb4c933165e97d3bb75d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayTask_code</b> (void *params)</td></tr>
-<tr class="memdesc:a9014901d3fcecb4c933165e97d3bb75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infinetely running code for the display functionality. <br /></td></tr>
+<tr class="memitem:a8d41c12af4f6e6faad84e1f21f99b3e1" id="r_a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a> ()</td></tr>
+<tr class="memdesc:a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD dislpay.  <br /></td></tr>
+<tr class="memitem:a9014901d3fcecb4c933165e97d3bb75d" id="r_a9014901d3fcecb4c933165e97d3bb75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a> (void *params)</td></tr>
+<tr class="memdesc:a9014901d3fcecb4c933165e97d3bb75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infinetely running code for the display functionality.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a560fad537460ccbe67d34fe45553af8f" id="r_a560fad537460ccbe67d34fe45553af8f"><td class="memItemLeft" align="right" valign="top"><a id="a560fad537460ccbe67d34fe45553af8f" name="a560fad537460ccbe67d34fe45553af8f"></a>
 Adafruit_PCD8544&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> = Adafruit_PCD8544( 2 , 15 , 13 )</td></tr>
+<tr class="memdesc:a560fad537460ccbe67d34fe45553af8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global display object for Nokia 5110 LCD. <br /></td></tr>
 <tr class="memitem:a92c6e37eb22a3715d8deee4f1bde57ac" id="r_a92c6e37eb22a3715d8deee4f1bde57ac"><td class="memItemLeft" align="right" valign="top"><a id="a92c6e37eb22a3715d8deee4f1bde57ac" name="a92c6e37eb22a3715d8deee4f1bde57ac"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>displayTask</b></td></tr>
+<tr class="memdesc:a92c6e37eb22a3715d8deee4f1bde57ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle for the display FreeRTOS task. <br /></td></tr>
 <tr class="memitem:a8098a149864b1ea4e2b1e10854cdd023" id="r_a8098a149864b1ea4e2b1e10854cdd023"><td class="memItemLeft" align="right" valign="top"><a id="a8098a149864b1ea4e2b1e10854cdd023" name="a8098a149864b1ea4e2b1e10854cdd023"></a>
 displayMode_e&#160;</td><td class="memItemRight" valign="bottom"><b>current_displayMode</b> = displayMode_boot</td></tr>
 </table>
@@ -125,8 +127,50 @@ displayMode_e&#160;</td><td class="memItemRight" valign="bottom"><b>current_disp
 <div class="textblock"><p>Display driver implementation for the lolinESP32 phone project. </p>
 <dl class="section author"><dt>Author</dt><dd>smookie77 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-06-02 </dd></dl>
-</div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2025-06-02</dd></dl>
+<p>Implements display initialization and task management. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a8d41c12af4f6e6faad84e1f21f99b3e1" name="a8d41c12af4f6e6faad84e1f21f99b3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d41c12af4f6e6faad84e1f21f99b3e1">&#9670;&#160;</a></span>display_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the LCD dislpay. </p>
+<p>Initialize the LCD display and start the display task. </p>
+
+</div>
+</div>
+<a id="a9014901d3fcecb4c933165e97d3bb75d" name="a9014901d3fcecb4c933165e97d3bb75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9014901d3fcecb4c933165e97d3bb75d">&#9670;&#160;</a></span>displayTask_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void displayTask_code </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>params</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Infinetely running code for the display functionality. </p>
+<p>FreeRTOS task code for display functionality. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

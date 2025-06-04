@@ -93,42 +93,41 @@ $(function(){initNavTree('display_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="display_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef DISPLAY_H_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define DISPLAY_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="display__prints_8h.html">display_prints.h</a>&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="display__handlers_8h.html">display_handlers.h</a>&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="string__utils_8h.html">../utils/string_utils.h</a>&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="phone__defines_8h.html">phone_defines.h</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;SPI.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;Adafruit_GFX.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;Adafruit_PCD8544.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> Adafruit_PCD8544 display;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> TaskHandle_t displayTask;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LCD_DC_PIN 2</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define LCD_CS_PIN 15</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define LCD_RST_PIN 13</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef DISPLAY_H_</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define DISPLAY_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="display__prints_8h.html">display_prints.h</a>&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="display__handlers_8h.html">display_handlers.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="serialH_8h.html">serialH.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="string__utils_8h.html">../utils/string_utils.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="phone__defines_8h.html">phone_defines.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;SPI.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;Adafruit_GFX.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;Adafruit_PCD8544.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">extern</span> Adafruit_PCD8544 <a class="code hl_variable" href="display_8cpp.html#a560fad537460ccbe67d34fe45553af8f">display</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> TaskHandle_t <a class="code hl_variable" href="display_8cpp.html#a92c6e37eb22a3715d8deee4f1bde57ac">displayTask</a>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define LCD_CONTRAST 53</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Primary functions</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a>();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a>(<span class="keywordtype">void</span> * params);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//DISPLAY_H_</span></div>
-<div class="ttc" id="adisplay_8h_html_a8d41c12af4f6e6faad84e1f21f99b3e1"><div class="ttname"><a href="display_8h.html#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a></div><div class="ttdeci">void display_init()</div><div class="ttdoc">Initialize the LCD dislpay.</div><div class="ttdef"><b>Definition</b> display.cpp:25</div></div>
-<div class="ttc" id="adisplay_8h_html_a9014901d3fcecb4c933165e97d3bb75d"><div class="ttname"><a href="display_8h.html#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a></div><div class="ttdeci">void displayTask_code(void *params)</div><div class="ttdoc">Infinetely running code for the display functionality.</div><div class="ttdef"><b>Definition</b> display.cpp:40</div></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="display_8h.html#a402d8ccd0bb0a6cc377222e75b8e050e">   30</a></span><span class="preprocessor">#define LCD_DC_PIN 2 </span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="display_8h.html#a50d72083b1ed4dd0bc2eaabb4a0332c8">   31</a></span><span class="preprocessor">#define LCD_CS_PIN 15 </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="display_8h.html#a9d11073f149e02e0a07937196d1e5a8e">   32</a></span><span class="preprocessor">#define LCD_RST_PIN 13 </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="display_8h.html#a2fccda530baf3b213f677249fd7ce6e7">   33</a></span><span class="preprocessor">#define LCD_CONTRAST 53 </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a>(<span class="keywordtype">void</span> * params);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">//DISPLAY_H_</span></div>
+<div class="ttc" id="adisplay_8cpp_html_a560fad537460ccbe67d34fe45553af8f"><div class="ttname"><a href="display_8cpp.html#a560fad537460ccbe67d34fe45553af8f">display</a></div><div class="ttdeci">Adafruit_PCD8544 display</div><div class="ttdoc">Global display object for Nokia 5110 LCD.</div><div class="ttdef"><b>Definition</b> display.cpp:14</div></div>
+<div class="ttc" id="adisplay_8cpp_html_a92c6e37eb22a3715d8deee4f1bde57ac"><div class="ttname"><a href="display_8cpp.html#a92c6e37eb22a3715d8deee4f1bde57ac">displayTask</a></div><div class="ttdeci">TaskHandle_t displayTask</div><div class="ttdoc">Handle for the display FreeRTOS task.</div><div class="ttdef"><b>Definition</b> display.cpp:15</div></div>
+<div class="ttc" id="adisplay_8h_html_a8d41c12af4f6e6faad84e1f21f99b3e1"><div class="ttname"><a href="display_8h.html#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a></div><div class="ttdeci">void display_init()</div><div class="ttdoc">Initialize the LCD display and start the display task.</div><div class="ttdef"><b>Definition</b> display.cpp:27</div></div>
+<div class="ttc" id="adisplay_8h_html_a9014901d3fcecb4c933165e97d3bb75d"><div class="ttname"><a href="display_8h.html#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a></div><div class="ttdeci">void displayTask_code(void *params)</div><div class="ttdoc">FreeRTOS task code for display functionality.</div><div class="ttdef"><b>Definition</b> display.cpp:44</div></div>
 <div class="ttc" id="adisplay__handlers_8h_html"><div class="ttname"><a href="display__handlers_8h.html">display_handlers.h</a></div><div class="ttdoc">Display handler functions for the lolinESP32 phone project.</div></div>
 <div class="ttc" id="adisplay__prints_8h_html"><div class="ttname"><a href="display__prints_8h.html">display_prints.h</a></div><div class="ttdoc">Print utilities for the Nokia 5110 LCD display.</div></div>
 <div class="ttc" id="aphone__defines_8h_html"><div class="ttname"><a href="phone__defines_8h.html">phone_defines.h</a></div><div class="ttdoc">Phone project defines and versioning for the lolinESP32 phone project.</div></div>
+<div class="ttc" id="aserialH_8h_html"><div class="ttname"><a href="serialH_8h.html">serialH.h</a></div><div class="ttdoc">Serial handler interface for buffered, multi-task serial output.</div></div>
 <div class="ttc" id="astring__utils_8h_html"><div class="ttname"><a href="string__utils_8h.html">string_utils.h</a></div><div class="ttdoc">String utility functions for the lolinESP32 phone project.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

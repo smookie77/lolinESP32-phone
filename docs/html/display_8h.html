@@ -98,6 +98,7 @@ $(function(){initNavTree('display_8h.html','',''); });
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="display__prints_8h_source.html">display_prints.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="display__handlers_8h_source.html">display_handlers.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="serialH_8h_source.html">serialH.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="string__utils_8h_source.html">../utils/string_utils.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="phone__defines_8h_source.html">phone_defines.h</a>&gt;</code><br />
 <code>#include &lt;SPI.h&gt;</code><br />
@@ -110,33 +111,84 @@ $(function(){initNavTree('display_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:a402d8ccd0bb0a6cc377222e75b8e050e" id="r_a402d8ccd0bb0a6cc377222e75b8e050e"><td class="memItemLeft" align="right" valign="top"><a id="a402d8ccd0bb0a6cc377222e75b8e050e" name="a402d8ccd0bb0a6cc377222e75b8e050e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_DC_PIN</b>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a402d8ccd0bb0a6cc377222e75b8e050e"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Data/Command pin. <br /></td></tr>
 <tr class="memitem:a50d72083b1ed4dd0bc2eaabb4a0332c8" id="r_a50d72083b1ed4dd0bc2eaabb4a0332c8"><td class="memItemLeft" align="right" valign="top"><a id="a50d72083b1ed4dd0bc2eaabb4a0332c8" name="a50d72083b1ed4dd0bc2eaabb4a0332c8"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CS_PIN</b>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:a50d72083b1ed4dd0bc2eaabb4a0332c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Chip Select pin. <br /></td></tr>
 <tr class="memitem:a9d11073f149e02e0a07937196d1e5a8e" id="r_a9d11073f149e02e0a07937196d1e5a8e"><td class="memItemLeft" align="right" valign="top"><a id="a9d11073f149e02e0a07937196d1e5a8e" name="a9d11073f149e02e0a07937196d1e5a8e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_RST_PIN</b>&#160;&#160;&#160;13</td></tr>
+<tr class="memdesc:a9d11073f149e02e0a07937196d1e5a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD Reset pin. <br /></td></tr>
 <tr class="memitem:a2fccda530baf3b213f677249fd7ce6e7" id="r_a2fccda530baf3b213f677249fd7ce6e7"><td class="memItemLeft" align="right" valign="top"><a id="a2fccda530baf3b213f677249fd7ce6e7" name="a2fccda530baf3b213f677249fd7ce6e7"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_CONTRAST</b>&#160;&#160;&#160;53</td></tr>
+<tr class="memdesc:a2fccda530baf3b213f677249fd7ce6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD contrast value. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d41c12af4f6e6faad84e1f21f99b3e1" id="r_a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="memItemLeft" align="right" valign="top"><a id="a8d41c12af4f6e6faad84e1f21f99b3e1" name="a8d41c12af4f6e6faad84e1f21f99b3e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>display_init</b> ()</td></tr>
-<tr class="memdesc:a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD dislpay. <br /></td></tr>
-<tr class="memitem:a9014901d3fcecb4c933165e97d3bb75d" id="r_a9014901d3fcecb4c933165e97d3bb75d"><td class="memItemLeft" align="right" valign="top"><a id="a9014901d3fcecb4c933165e97d3bb75d" name="a9014901d3fcecb4c933165e97d3bb75d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayTask_code</b> (void *params)</td></tr>
-<tr class="memdesc:a9014901d3fcecb4c933165e97d3bb75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infinetely running code for the display functionality. <br /></td></tr>
+<tr class="memitem:a8d41c12af4f6e6faad84e1f21f99b3e1" id="r_a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d41c12af4f6e6faad84e1f21f99b3e1">display_init</a> ()</td></tr>
+<tr class="memdesc:a8d41c12af4f6e6faad84e1f21f99b3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the LCD display and start the display task.  <br /></td></tr>
+<tr class="memitem:a9014901d3fcecb4c933165e97d3bb75d" id="r_a9014901d3fcecb4c933165e97d3bb75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9014901d3fcecb4c933165e97d3bb75d">displayTask_code</a> (void *params)</td></tr>
+<tr class="memdesc:a9014901d3fcecb4c933165e97d3bb75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">FreeRTOS task code for display functionality.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a560fad537460ccbe67d34fe45553af8f" id="r_a560fad537460ccbe67d34fe45553af8f"><td class="memItemLeft" align="right" valign="top"><a id="a560fad537460ccbe67d34fe45553af8f" name="a560fad537460ccbe67d34fe45553af8f"></a>
 Adafruit_PCD8544&#160;</td><td class="memItemRight" valign="bottom"><b>display</b></td></tr>
+<tr class="memdesc:a560fad537460ccbe67d34fe45553af8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global display object for Nokia 5110 LCD. <br /></td></tr>
 <tr class="memitem:a92c6e37eb22a3715d8deee4f1bde57ac" id="r_a92c6e37eb22a3715d8deee4f1bde57ac"><td class="memItemLeft" align="right" valign="top"><a id="a92c6e37eb22a3715d8deee4f1bde57ac" name="a92c6e37eb22a3715d8deee4f1bde57ac"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>displayTask</b></td></tr>
+<tr class="memdesc:a92c6e37eb22a3715d8deee4f1bde57ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle for the display FreeRTOS task. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display driver interface for the lolinESP32 phone project. </p>
 <p>Contains function declarations and macros for initializing and controlling the Nokia 5110 LCD display. </p>
-</div></div><!-- contents -->
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a8d41c12af4f6e6faad84e1f21f99b3e1" name="a8d41c12af4f6e6faad84e1f21f99b3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d41c12af4f6e6faad84e1f21f99b3e1">&#9670;&#160;</a></span>display_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the LCD display and start the display task. </p>
+<p>Initialize the LCD display and start the display task. </p>
+
+</div>
+</div>
+<a id="a9014901d3fcecb4c933165e97d3bb75d" name="a9014901d3fcecb4c933165e97d3bb75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9014901d3fcecb4c933165e97d3bb75d">&#9670;&#160;</a></span>displayTask_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void displayTask_code </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>params</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FreeRTOS task code for display functionality. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td>Unused parameter for FreeRTOS task signature.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>FreeRTOS task code for display functionality. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

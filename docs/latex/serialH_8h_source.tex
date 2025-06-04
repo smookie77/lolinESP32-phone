@@ -1,0 +1,35 @@
+\doxysection{serial\+H.\+h}
+\hypertarget{serialH_8h_source}{}\label{serialH_8h_source}\index{lib/serialHandler/serialH.h@{lib/serialHandler/serialH.h}}
+\mbox{\hyperlink{serialH_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ SERIALH\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SERIALH\_H\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <esp32-\/hal-\/uart.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SERIAL\_BAUD\ 2000000}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ SERIAL\_TASK\_DISPLAY\ 0}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ SERIAL\_TASK\_OTHER1\ \ 1}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ SERIAL\_TASK\_OTHER2\ \ 2}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ SERIAL\_TASK\_OTHER3\ \ 3}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{serialH_8h_aa116b54fcabc8574ea05b7bdaa40e352}{serial\_handler\_init}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{serialH_8h_a81405539e4a220dc349cc7665b938439}{SerialHandler\_code}}(\textcolor{keywordtype}{void}\ *\ params);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{serialH_8h_a0d7b835fdeb323974166bb8ccb3376ad}{serial\_buffer\_write}}(\textcolor{keywordtype}{int}\ task\_id,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{size\_t}\ len);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SERIALH\_H\_}}
+
+\end{DoxyCode}

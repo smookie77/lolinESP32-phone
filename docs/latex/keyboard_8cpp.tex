@@ -9,24 +9,21 @@ Keyboard driver implementation for the lolin\+ESP32 phone project.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781}\label{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781} 
-void {\bfseries keyboard\+\_\+init} ()
-\item 
-\Hypertarget{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319}\label{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319} 
-char {\bfseries keyboard\+\_\+get\+Key} ()
-\item 
-\Hypertarget{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692}\label{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692} 
-void {\bfseries keyboard\+\_\+\+Task\+Code} (void \texorpdfstring{$\ast$}{*}params)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781}{keyboard\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the keyboard hardware and start the scanning task. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319}{keyboard\+\_\+get\+Key}} ()
+\begin{DoxyCompactList}\small\item\em Get and clear the last pressed key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692}{keyboard\+\_\+\+Task\+Code}} (void \texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task code for keyboard scanning. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{keyboard_8cpp_ac0b07d9ea8814ed34ebaf77df61d1309}\label{keyboard_8cpp_ac0b07d9ea8814ed34ebaf77df61d1309} 
 volatile char {\bfseries keyboard\+\_\+pressed\+Key} = \textquotesingle{}\textbackslash{}0\textquotesingle{}
-\item 
+\begin{DoxyCompactList}\small\item\em Last pressed key (volatile, updated by keyboard task). \end{DoxyCompactList}\item 
 \Hypertarget{keyboard_8cpp_a79a0f3e539339f65035d34b48ff48cee}\label{keyboard_8cpp_a79a0f3e539339f65035d34b48ff48cee} 
 Task\+Handle\+\_\+t {\bfseries keyboard\+\_\+\+Task}
-\item 
+\begin{DoxyCompactList}\small\item\em Handle for the keyboard Free\+RTOS task. \end{DoxyCompactList}\item 
 \Hypertarget{keyboard_8cpp_a829655a147df70dd4cc94eae40a2204e}\label{keyboard_8cpp_a829655a147df70dd4cc94eae40a2204e} 
 const byte {\bfseries ROWS} = 5
 \item 
@@ -56,8 +53,51 @@ smookie77
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/02 
+2025-\/06-\/02
 \end{DoxyDate}
+Implements keyboard scanning and task management. 
+
+\label{doc-func-members}
+\Hypertarget{keyboard_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319}\index{keyboard.cpp@{keyboard.cpp}!keyboard\_getKey@{keyboard\_getKey}}
+\index{keyboard\_getKey@{keyboard\_getKey}!keyboard.cpp@{keyboard.cpp}}
+\doxysubsubsection{\texorpdfstring{keyboard\_getKey()}{keyboard\_getKey()}}
+{\footnotesize\ttfamily \label{keyboard_8cpp_a4d7f0c28b64442ea519eb5aa6cd72319} 
+char keyboard\+\_\+get\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get and clear the last pressed key. 
+
+\begin{DoxyReturn}{Returns}
+The last pressed key, or \textquotesingle{}\textbackslash{}0\textquotesingle{} if none. 
+\end{DoxyReturn}
+\Hypertarget{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781}\index{keyboard.cpp@{keyboard.cpp}!keyboard\_init@{keyboard\_init}}
+\index{keyboard\_init@{keyboard\_init}!keyboard.cpp@{keyboard.cpp}}
+\doxysubsubsection{\texorpdfstring{keyboard\_init()}{keyboard\_init()}}
+{\footnotesize\ttfamily \label{keyboard_8cpp_aaeb4e4a3c4813ee1efc6b98bba9ec781} 
+void keyboard\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the keyboard hardware and start the scanning task. 
+
+Initialize the keyboard hardware and task. \Hypertarget{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692}\index{keyboard.cpp@{keyboard.cpp}!keyboard\_TaskCode@{keyboard\_TaskCode}}
+\index{keyboard\_TaskCode@{keyboard\_TaskCode}!keyboard.cpp@{keyboard.cpp}}
+\doxysubsubsection{\texorpdfstring{keyboard\_TaskCode()}{keyboard\_TaskCode()}}
+{\footnotesize\ttfamily \label{keyboard_8cpp_ab20c58f7874c7cc085ace4423dfa9692} 
+void keyboard\+\_\+\+Task\+Code (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task code for keyboard scanning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Unused parameter for Free\+RTOS task signature. \\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-var-members}

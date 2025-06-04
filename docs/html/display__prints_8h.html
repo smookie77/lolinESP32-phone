@@ -96,6 +96,7 @@ $(function(){initNavTree('display__prints_8h.html','',''); });
 <p>Print utilities for the Nokia 5110 LCD display.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="display_8h_source.html">display.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="serialH_8h_source.html">serialH.h</a>&gt;</code><br />
 </div>
 <p><a href="display__prints_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -103,19 +104,20 @@ $(function(){initNavTree('display__prints_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:aa8941a9e51687ca46086ae67af292ca3" id="r_aa8941a9e51687ca46086ae67af292ca3"><td class="memItemLeft" align="right" valign="top"><a id="aa8941a9e51687ca46086ae67af292ca3" name="aa8941a9e51687ca46086ae67af292ca3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_DEFAULT_FONTSIZE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:aa8941a9e51687ca46086ae67af292ca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default font size for display text. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad8b11cf27730291193fb55ab009270cc" id="r_ad8b11cf27730291193fb55ab009270cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8b11cf27730291193fb55ab009270cc">display_print_ScrollingMenu</a> (uint8_t size, uint8_t rows, char *text)</td></tr>
-<tr class="memdesc:ad8b11cf27730291193fb55ab009270cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a simple menu on the LCD.  <br /></td></tr>
+<tr class="memdesc:ad8b11cf27730291193fb55ab009270cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a scrolling menu to the display.  <br /></td></tr>
 <tr class="memitem:a07498ecff9923eb17ed256ff8ce6cf04" id="r_a07498ecff9923eb17ed256ff8ce6cf04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07498ecff9923eb17ed256ff8ce6cf04">display_print</a> (char *str)</td></tr>
-<tr class="memdesc:a07498ecff9923eb17ed256ff8ce6cf04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a given string to the LCD.  <br /></td></tr>
+<tr class="memdesc:a07498ecff9923eb17ed256ff8ce6cf04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a string to the display.  <br /></td></tr>
 <tr class="memitem:a5d079197900a87f5779c78ec83e26e18" id="r_a5d079197900a87f5779c78ec83e26e18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d079197900a87f5779c78ec83e26e18">display_print</a> (char *str, uint8_t size)</td></tr>
-<tr class="memdesc:a5d079197900a87f5779c78ec83e26e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a given string to the LCD, with an option to change the font size.  <br /></td></tr>
+<tr class="memdesc:a5d079197900a87f5779c78ec83e26e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a string to the display with specified font size.  <br /></td></tr>
 <tr class="memitem:aa3773a224be8132e46c4f9447d6552b1" id="r_aa3773a224be8132e46c4f9447d6552b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3773a224be8132e46c4f9447d6552b1">display_print</a> (char *str, uint8_t size, uint8_t row)</td></tr>
-<tr class="memdesc:aa3773a224be8132e46c4f9447d6552b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a given string to the LCD, with an option to change the font size and the row.  <br /></td></tr>
+<tr class="memdesc:aa3773a224be8132e46c4f9447d6552b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a string to the display with font size and row.  <br /></td></tr>
 <tr class="memitem:a3b646b0e8939600d49325a4a20fcdfe5" id="r_a3b646b0e8939600d49325a4a20fcdfe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b646b0e8939600d49325a4a20fcdfe5">display_print</a> (char *str, uint8_t size, uint8_t x, uint8_t y)</td></tr>
-<tr class="memdesc:a3b646b0e8939600d49325a4a20fcdfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a given string to the LCD, with an option to change the font size, and text's position.  <br /></td></tr>
+<tr class="memdesc:a3b646b0e8939600d49325a4a20fcdfe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a string to the display with font size and position.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Print utilities for the Nokia 5110 LCD display. </p>
@@ -136,10 +138,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print a given string to the LCD. </p>
+<p>Print a string to the display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>A NULL terminated C string </td></tr>
+    <tr><td class="paramname">str</td><td>Null-terminated string. </td></tr>
   </table>
   </dd>
 </dl>
@@ -165,11 +167,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print a given string to the LCD, with an option to change the font size. </p>
+<p>Print a string to the display with specified font size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>A NULL terminated C string </td></tr>
-    <tr><td class="paramname">size</td><td>Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 </td></tr>
+    <tr><td class="paramname">str</td><td>Null-terminated string. </td></tr>
+    <tr><td class="paramname">size</td><td>Font size. </td></tr>
   </table>
   </dd>
 </dl>
@@ -200,12 +202,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print a given string to the LCD, with an option to change the font size and the row. </p>
+<p>Print a string to the display with font size and row. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>A NULL terminated C string </td></tr>
-    <tr><td class="paramname">size</td><td>Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 </td></tr>
-    <tr><td class="paramname">row</td><td>On which start of the line on LCD to print the string </td></tr>
+    <tr><td class="paramname">str</td><td>Null-terminated string. </td></tr>
+    <tr><td class="paramname">size</td><td>Font size. </td></tr>
+    <tr><td class="paramname">row</td><td>Row index. </td></tr>
   </table>
   </dd>
 </dl>
@@ -241,13 +243,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print a given string to the LCD, with an option to change the font size, and text's position. </p>
+<p>Print a string to the display with font size and position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">str</td><td>A NULL terminated C string </td></tr>
-    <tr><td class="paramname">size</td><td>Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 </td></tr>
-    <tr><td class="paramname">x</td><td>X coordinate of the desired print place of the string </td></tr>
-    <tr><td class="paramname">y</td><td>Y coordinate of the desired print place of the string </td></tr>
+    <tr><td class="paramname">str</td><td>Null-terminated string. </td></tr>
+    <tr><td class="paramname">size</td><td>Font size. </td></tr>
+    <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
   </table>
   </dd>
 </dl>
@@ -278,12 +280,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Make a simple menu on the LCD. </p>
+<p>Print a scrolling menu to the display. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>Size 1 = 6x8 pixel chars, size 2 =12x18, size 3 =18x24 </td></tr>
-    <tr><td class="paramname">rows</td><td>How many lines are in the text string </td></tr>
-    <tr><td class="paramname">text</td><td>C string, separete every row with new line char </td></tr>
+    <tr><td class="paramname">size</td><td>Font size. </td></tr>
+    <tr><td class="paramname">rows</td><td>Number of rows in the text. </td></tr>
+    <tr><td class="paramname">text</td><td>Text to display, with lines separated by '<br  />
+'. </td></tr>
   </table>
   </dd>
 </dl>
