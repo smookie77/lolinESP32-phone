@@ -1,4 +1,9 @@
-#Send messages via discord webhooks
+##
+# @file textHook.py
+# @author ISrbz 
+# @brief Send messages via discord webhooks.
+
+
 from login_info import webhook1, webhook2
 
 from discord_webhook import DiscordWebhook

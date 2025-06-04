@@ -1,4 +1,7 @@
-#Create bot to recieve messages
+##
+# @file textBot.py
+# @author ISrbz 
+# @brief Logs in to Discord with a bot account.
 
 import discord
 
