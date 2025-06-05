@@ -1,3 +1,5 @@
+#!/bin/python
+
 ##
 # @file main.py
 # @author ISrbz 

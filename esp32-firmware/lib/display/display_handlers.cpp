@@ -39,7 +39,7 @@ void display_handleMode_boot(){
         vTaskDelay(1000/portTICK_PERIOD_MS);
     }
     display_print("*", 1, 84-6, 24);
-    while(eTask_getState(keyboard_Task) == eInvalid) {
+    while(eTaskGetState(keyboard_Task) == eInvalid) {
         vTaskDelay(1000/portTICK_PERIOD_MS);
     }
     display_print("*", 1, 84-6, 32);
