@@ -7,19 +7,23 @@
  * 
  * Initializes system peripherals and starts the main application loop.
  */
-
 #include <Arduino.h>
+
 #include <keyboard.h>
 #include <display.h>
 #include <battery.h>
 #include <serialH.h>
+#include <wifi.h>
 
 /**
- * @brief Arduino setup function. Initializes display and keyboard.
+ * @brief Arduino setup function. Initializes display, serial port, wifi and keyboard.
  */
 void setup(){
+    serial_handler_init();
     display_init();
+    // vTaskDelay(1000/portTICK_PERIOD_MS);
     keyboard_init();
+    wifi_init();
 }
 
 /**

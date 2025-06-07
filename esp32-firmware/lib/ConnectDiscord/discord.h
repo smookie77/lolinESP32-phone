@@ -3,12 +3,10 @@
 
 // Code for header body
 #include <Arduino.h>
-#include <WiFi.h>
-#include <HTTPClient.h>
-#include <Arduino_JSON.h>
 
-const char* ssid = "REPLACE_WITH_YOUR_SSID";
-const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+#include <HTTPClient.h>
+
+
 
 //Your Domain name with URL path or IP address with path
 const char* serverName = "";
