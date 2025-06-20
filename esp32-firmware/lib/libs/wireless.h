@@ -1,5 +1,5 @@
-#ifndef WIFI_H_
-#define WIFI_H_
+#ifndef WIRELESS_H_
+#define WIRELESS_H_
 
 #include <Arduino.h>
 #include <WiFi.h>
@@ -15,4 +15,4 @@ extern int wifi_signalStrength;
 void wifi_init();
 void wifi_taskCode(void * params);
 
-#endif //WIFI_H_
+#endif //WIRELESS_H_

@@ -8,12 +8,11 @@
  * Initializes system peripherals and starts the main application loop.
  */
 #include <Arduino.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_PCD8544.h>
+#include "lib.h"
 
-#include <keyboard.h>
-#include <display.h>
-#include <battery.h>
-#include <serialH.h>
-#include <wifi.h>
+
 
 /**
  * @brief Arduino setup function. Initializes display, serial port, wifi and keyboard.

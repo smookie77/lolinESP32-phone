@@ -4,9 +4,8 @@
  *
  * Implements functions for printing text and menus to the display.
  */
-#include <display_prints.h>
-#include <serialH.h>
-#include <string_utils.h>
+#include "display_prints.h"
+
 
 extern Adafruit_PCD8544 display;
 

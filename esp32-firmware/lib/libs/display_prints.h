@@ -7,8 +7,10 @@
 #ifndef DISPLAY_PRINTS_H_
 #define DISPLAY_PRINTS_H_
 
-#include <display.h>
-#include <icons.h>
+#include "display.h"
+#include "icons.h"
+#include <serialH.h>
+#include <string_utils.h>
 
 #define LCD_DEFAULT_FONTSIZE 1 ///< Default font size for display text.
 

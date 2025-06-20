@@ -5,16 +5,7 @@
  * @version 0.1
  * @date 2025-06-04
  */
-#define TINY_GSM_MODEM_SIM800
-#define TINY_GSM_USE_GPRS true
-#include <gsm.h>
-#include <TinyGSM.h>
-#include <string.h>
-#include <display.h>
-
-#define SIM800L_IP5306_VERSION_20200811
-#define TINY_GSM_MODEM_SIM800
-
+#include "gsm.h"
 
 String datetime;
 
@@ -79,7 +70,7 @@ void gsm_hangup() {
     modem.waitResponse(1000);
 }
 
-extern displayMode_e current_displayMode;
+
 
 void gsm_taskCode(void * params) {
     modem.restart();

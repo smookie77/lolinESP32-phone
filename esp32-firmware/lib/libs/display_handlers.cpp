@@ -7,14 +7,9 @@
  * 
  * Implements handlers for different display modes.
  */
-#include <display_handlers.h>
-#include <keyboard.h>
-#include <display_prints.h>
-#include <serialH.h>
-#include <string_utils.h>
-#include <battery.h>
+#include "display_handlers.h"
 #include <Preferences.h>
-#include <gsm.h> // Make sure this is included
+
 
 
 // --- Settings menu state and variables: place here, after includes, before any function ---

@@ -7,9 +7,12 @@
  * 
  * Implements display initialization and task management.
  */
-#include <display.h>
-#include <serialH.h>
-#include <string_utils.h>
+#include "display.h"
+#include "serialH.h"
+#include "string_utils.h"
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_PCD8544.h>
 
 Adafruit_PCD8544 display = Adafruit_PCD8544(LCD_DC_PIN, LCD_CS_PIN, LCD_RST_PIN);
 TaskHandle_t displayTask;

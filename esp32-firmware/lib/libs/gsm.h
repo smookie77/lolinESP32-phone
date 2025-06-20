@@ -10,7 +10,15 @@
 #ifndef GSM_H_
 #define GSM_H_
 
+#define SIM800L_IP5306_VERSION_20200811
+#define TINY_GSM_MODEM_SIM800
+#define TINY_GSM_USE_GPRS true
+
+
 #include <Arduino.h>
+#include <TinyGSM.h>
+#include <string.h>
+#include "display.h"
 
 extern bool gsm_isConnected;
 extern int gsm_signalStrength;  // Range 0-31, where 0 is no signal and 31 is max signal

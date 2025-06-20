@@ -8,14 +8,13 @@
 #define DISPLAY_H_
 
 #include <Arduino.h>
-#include <display_prints.h>
-#include <display_handlers.h>
-#include <serialH.h>
-#include <../utils/string_utils.h>
-#include <phone_defines.h>
-#include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_PCD8544.h>
+#include "display_prints.h"
+#include "display_handlers.h"
+#include "serialH.h"
+#include "string_utils.h"
+#define PHONE_VER "V0.1"
 
 /**
  * @brief Global display object for Nokia 5110 LCD.

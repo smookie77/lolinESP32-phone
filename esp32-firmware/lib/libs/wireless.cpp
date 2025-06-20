@@ -1,4 +1,5 @@
-#include <wifi.h>
+#include "wireless.h"
+
 
 char* ssid = "241.wifi.smooker.org";
 char* password = "tplinkmotorola12";

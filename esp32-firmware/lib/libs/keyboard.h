@@ -10,9 +10,9 @@
 #ifndef KEYBOARD_H_
 #define KEYBOARD_H_
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include <Keypad.h>
-#include <serialH.h>
+#include "serialH.h"
 
 /**
  * @brief Last pressed key (volatile, updated by keyboard task).

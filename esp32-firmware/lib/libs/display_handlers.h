@@ -10,13 +10,15 @@
 #ifndef DISPLAY_HANDLERS_H_
 #define DISPLAY_HANDLERS_H_
 
-#include <display.h>
-#include <phone_defines.h>
-#include <battery.h>
-#include <serialH.h>
-#include <icons.h>
-#include <wifi.h>
-#include <gsm.h>
+#include "display.h"
+#include "serialH.h"
+#include "icons.h"
+#include "battery.h"
+#include "wireless.h"
+#include "keyboard.h"
+#include "gsm.h"
+
+#define PHONE_VER "V0.1"
 
 /**
  * @brief Handle the display boot mode.
