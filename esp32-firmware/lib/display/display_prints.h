@@ -8,10 +8,13 @@
 #define DISPLAY_PRINTS_H_
 
 #include <display.h>
-#include <serialH.h>
+#include <icons.h>
 
 #define LCD_DEFAULT_FONTSIZE 1 ///< Default font size for display text.
 
+
+
+void display_print_icon(Icon_t icon, uint8_t x, uint8_t y);
 /**
  * @brief Print a scrolling menu to the display.
  * @param size Font size.

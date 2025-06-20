@@ -11,6 +11,17 @@
 extern Adafruit_PCD8544 display;
 
 
+void display_print_icon(Icon_t icon, uint8_t x, uint8_t y) {
+    const char* img = icon.image;
+    for(int row = 0; row < icon.rows; row++) {
+        for(int col = 0; col < icon.cols; col++) {
+            if(img[row * (icon.cols + 1) + col] == '*') {  // +1 for newline character
+                display.drawPixel(x + col, y + row, BLACK);
+            }
+        }
+    }
+}
+
 
 /**
  * @brief Print a scrolling menu to the display.

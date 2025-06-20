@@ -19,11 +19,14 @@
  * @brief Arduino setup function. Initializes display, serial port, wifi and keyboard.
  */
 void setup(){
-    serial_handler_init();
+    // serial_handler_init();
     display_init();
     // vTaskDelay(1000/portTICK_PERIOD_MS);
     keyboard_init();
     wifi_init();
+
+    vTaskDelay(1000 / portTICK_PERIOD_MS); // Time to show the boot screen
+    current_displayMode = displayMode_main;
 }
 
 /**

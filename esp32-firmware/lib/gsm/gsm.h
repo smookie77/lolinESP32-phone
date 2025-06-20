@@ -11,7 +11,17 @@
 #define GSM_H_
 
 #include <Arduino.h>
-#include <serialH.h>
+
+extern bool gsm_isConnected;
+extern int gsm_signalStrength;  // Range 0-31, where 0 is no signal and 31 is max signal
+
+#define MODEM_TX 17
+#define MODEM_RX 16
+#define MODEM_BAUD 115200
+#define SerialMon Serial
+
+extern String datetime;
+
 
 /**
  * @brief Initialize the GSM module.
@@ -19,31 +29,25 @@
 void gsm_init();
 
 /**
- * @brief Send an SMS message.
- * @param number Recipient phone number.
- * @param message Message text.
+ * @brief Task code for GSM module.
+ * @param params Task parameters.
  */
-void gsm_sendSMS(const char* number, const char* message);
+void gsm_taskCode(void * params);
 
 /**
- * @brief Make a call to a number.
- * @param number Phone number to call.
+ * @brief Get current time from SIM800 module. Returns true if successful.
  */
-void gsm_makeCall(const char* number);
+bool gsm_get_time(char* out_datetime, size_t maxlen);
 
 /**
- * @brief Receive an incoming call.
+ * @brief Make a call to the given phone number.
  */
-void gsm_receiveCall();
+bool gsm_make_call(const char* number);
 
 /**
  * @brief Hang up the current call.
  */
-void gsm_hangupCall();
+void gsm_hangup();
 
-/**
- * @brief Check GSM signal quality.
- */
-void gsm_checkSignalQuality();
 
 #endif //GSM_H_
