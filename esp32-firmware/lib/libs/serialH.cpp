@@ -7,10 +7,10 @@
  * 
  * Implements per-task serial buffers and a handler task that flushes them to UART.
  */
-#include <serialH.h>
-#include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
+#include "serialH.h"
+#include <string.h>
 
 #define SERIAL_TASK_COUNT 4 ///< Number of serial task buffers.
 #define SERIAL_BUFFER_SIZE 512 ///< Size of each serial buffer.

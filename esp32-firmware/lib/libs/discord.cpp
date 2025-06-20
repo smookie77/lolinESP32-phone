@@ -1,4 +1,4 @@
-#include <discord.h>
+#include "discord.h"
 
 void discord_init(){
     

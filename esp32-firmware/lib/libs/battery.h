@@ -11,7 +11,7 @@
 #define BATERY_H_
 
 #include <Arduino.h>
-#include <serialH.h>
+#include "serialH.h"
 
 #define BATTERY_ADC_PIN 35 ///< ADC pin for battery voltage measurement.
 #define BATTERY_VOLDIV_RATIO 1 ///< Voltage divider ratio.

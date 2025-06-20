@@ -7,7 +7,7 @@
  * 
  * Implements functions for reading battery voltage and raw ADC values.
  */
-#include <battery.h>
+#include "battery.h"
 
 /**
  * @brief Read raw ADC value from battery pin.

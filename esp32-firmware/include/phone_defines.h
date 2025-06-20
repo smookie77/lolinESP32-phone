@@ -14,7 +14,7 @@
  * @def PHONE_VER
  * @brief Project version string.
  */
-#define PHONE_VER "V0.1"
+
 
 
 #endif //PHONE_DEFINES_H_

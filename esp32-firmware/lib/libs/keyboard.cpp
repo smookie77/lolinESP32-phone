@@ -7,7 +7,7 @@
  * 
  * Implements keyboard scanning and task management.
  */
-#include <keyboard.h>
+#include "keyboard.h"
 
 volatile char keyboard_pressedKey = '\0';
 TaskHandle_t keyboard_Task;
